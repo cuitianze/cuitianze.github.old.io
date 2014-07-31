@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+  Page not found - doppnet.com | doppnet.com
+</title>
+<link rel="stylesheet" type="text/css" media="all" href="http://doppnet.com/wp-content/themes/doppnet-2013/style.css" />
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="doppnet.com &raquo; Feed" href="http://doppnet.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="doppnet.com &raquo; Comments Feed" href="http://doppnet.com/comments/feed/" />
+<link rel='stylesheet' id='wp-syntax-css-css'  href='http://doppnet.com/wp-content/plugins/wp-syntax/css/wp-syntax.css?ver=1.0' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://doppnet.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://doppnet.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.9.1" />
+<link type="text/css" rel="stylesheet" href="http://doppnet.com/wp-content/plugins/easy-chart-builder/easy-chart-builder.css" /><meta property="og:title" content="Page not found" /><meta property="og:type" content="article" /><meta property="og:url" content="http://doppnet.com/2011/10/10-advanced-javascript-interview-questions/%7B%7BSTATIC_URL%7D%7Dfavicon.ico" /><meta property="og:site_name" content="doppnet.com" /><meta property="og:description" content="Page not found" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="{{STATIC_URL}}favicon.ico">
+</head>
+
+<body class="error404">
+
+<div id="wrap">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<header>
+				<div class="row-fluid">
+					<div class="span8 offset4 logo">
+						<h1>
+						<a href="http://doppnet.com/">doppnet.com</a>
+						</h1>
+						<p class="headline">
+							JavaScript. Web. Games. Linux. Everything in between.						</p>
+					</div>
+				</div>
+			</header>
+			<section class="main">
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4 meta">
+			<h1>Page Not Found</h1>
+		</div>
+		<div class="span8">
+			<p>
+				<strong>Did you type the URL?</strong><br />
+				You may have typed the address (URL) incorrectly. Check it to make sure you've got the exact right spelling, capitalization, etc.
+			</p>
+			<p>
+				<strong>Did you follow a link from somewhere else at this site?</strong><br />
+				If you reached this page from another part of this site.
+			</p>
+			<p>
+				<strong>Did you follow a link from another site?</strong><br />
+				Links from other sites can sometimes be outdated or misspelled.
+			</p>
+		</div>
+	</div>
+</div>
+
+				</section>
+			</div>
+		</div>
+	<div id="push"></div>
+</div>
+<footer>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span4">
+				<form method="get" class="searchform center" action="http://doppnet.com/">
+	<div class="input-append">
+		<input name="s" placeholder="Search" type="text" />
+		<button class="btn">
+			<span class="icon icon-search"></span>
+		</button>
+	</div>
+</form>			</div>
+			<div class="span4 social">
+				<p>
+					<a href="http://twitter.com/tnajdek">
+						Follow me
+						<span class="icon icon-twitter"></span>
+					</a>
+				</p>
+				<p>
+					<a href="https://github.com/tnajdek/">
+						Fork me
+						<span class="icon icon-github"></span>
+					</a>
+				</p>
+			</div>
+			<div class="span4">
+												 
+				<nav class="offset6 span6 post-menu right">
+					<ul>
+													<li>
+								<a href="http://doppnet.com/about/">
+									About									<span class="icon icon-about"></span>
+								</a>
+							</li>
+													<li>
+								<a href="http://doppnet.com/my-projects/">
+									My Projects									<span class="icon icon-my-projects"></span>
+								</a>
+							</li>
+											</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37094768-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

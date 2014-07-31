@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html  xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://ogp.me/ns/fb#">
+    <head>
+        <!-- Fly Version: 1.8 1.8.5.1 (techrepublic prod) -->        
+        <title> We're sorry, page not found - TechRepublic </title>
+        
+        			<meta charset="UTF-8" />
+			
+							<meta name="robots" content="noindex, nofollow">
+						
+			            
+                        
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+            
+             
+                <meta property="fb:app_id" content="5601262769" />
+    <meta property="og:site_name" content="TechRepublic" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="TechRepublic">
+
+                <meta property="og:url" content="http://www.techrepublic.com/1.8.4.8/bundles/techrepubliccore/favicon.ico" />
+    <meta property="og:type" content="website" />
+
+        <meta name="msapplication-config" content="/bundles/techrepubliccore/browserconfig.xml" />
+
+    
+
+  
+                
+                                
+            
+                <link rel="shortcut icon" type="image/x-icon" href="/1.8.5.1/bundles/techrepubliccore/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/1.8.5.1/bundles/techrepubliccore/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/1.8.5.1/bundles/techrepubliccore/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/1.8.5.1/bundles/techrepubliccore/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/1.8.5.1/bundles/techrepubliccore/apple-touch-icon-precomposed.png">
+     
+            
+        
+            <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/main.css" />
+    <!--[if (lt IE 9)&(!IEMobile)]>
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/main.tablet.css" media="screen">
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/main.desktop.css" media="screen">
+    <![endif]-->
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/main.tablet.css" media="screen and (min-width:768px)" />
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/main.desktop.css" media="screen and (min-width:1024px)" />
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/print.css" media="print" />
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/1.8.5.1/bundles/techrepubliccore/css/ie9-below.css" media="screen">
+    <![endif]-->
+                <script type="text/javascript" src="/1.8.5.1/bundles/techrepubliccore/js-build/fly/libs/require-2.1.2.js"></script>
+<script type="text/javascript">
+    require.config({"baseUrl":"\/1.8.5.1\/bundles\/techrepubliccore\/js-build","config":{"version":{"fly\/components\/scrollbar":"1.0","fly\/components\/fixate":"1.0","fly\/components\/image-gallery-thumb":"1.0","fly\/components\/accordion":"1.0","fly\/components\/alert":"1.0","fly\/components\/base":"1.0","fly\/components\/carousel":"1.0","fly\/components\/dependent-field":"1.0","fly\/components\/dropdown":"1.0","fly\/components\/form-validate":"1.0","fly\/components\/iframe-messenger":"1.0","fly\/components\/image-gallery":"1.0","fly\/components\/livefyre-conversation":"1.0","fly\/components\/livefyre-commentcount":"1.0","fly\/components\/load-more":"1.0","fly\/components\/loading":"1.0","fly\/components\/modal":"1.0","fly\/components\/modal-async":"1.0","fly\/components\/modal-iframe":"1.0","fly\/components\/nrelate":"1.0","fly\/components\/poll":"1.0","fly\/components\/social-button":"1.0","fly\/components\/social-counts":"1.0","fly\/components\/social-links":"1.0","fly\/components\/tabs":"1.0","fly\/components\/tooltip":"1.0","fly\/components\/video":"1.0","fly\/libs\/easy-xdm":"2.4.17.1","fly\/libs\/jquery.widget":"1.9.2","fly\/libs\/jquery.cookie":"1.2","fly\/libs\/jquery.throttle-debounce":"1.1","fly\/libs\/omniture.s-code":"1.0","fly\/libs\/urs":"1.0","fly\/managers\/ad":"1.0","fly\/managers\/components":"1.0","fly\/managers\/cookie":"1.0","fly\/managers\/debug":"1.0","fly\/managers\/dw-tracking":"1.0","fly\/managers\/gpt":"1.0","fly\/managers\/history":"1.0","fly\/managers\/image-resolution":"1.0","fly\/managers\/madison":"1.0","fly\/managers\/omniture-tracking":"1.0","fly\/managers\/clicktale":"1.0","fly\/managers\/social-authentication":"1.0","fly\/managers\/tracking":"1.0","fly\/managers\/user":"1.0","fly\/utils\/data-prefix":"1.0","fly\/utils\/data-selector":"1.0","fly\/utils\/function-natives":"1.0","fly\/utils\/guid":"1.0","fly\/utils\/object-helper":"1.0","fly\/utils\/string-helper":"1.0","fly\/utils\/string-vars":"1.0","fly\/utils\/url-helper":"1.0","components\/accordion":"1.0","components\/autosuggest":"1.0","components\/carousel":"1.0","components\/catfish-bar":"1.0","components\/cookie-policy":"1.0","components\/css-map":"1.0","components\/custom-questions":"1.0","components\/dependent-field":"1.0","components\/form-validate":"1.0","components\/form-validate-group-checkbox":"1.0","components\/image-gallery":"1.0","components\/load-async":"1.0","components\/medusa-async":"1.0","components\/newsletter-subscription":"1.0","components\/share-bar":"1.0","components\/social-links":"1.0","components\/social-counts":"1.0","components\/view-more":"1.0","components\/char-count":"1.0","components\/show-hide":"1.0","components\/tabs":"1.0","components\/forum-activity":"1.0","components\/forum-people":"1.0","components\/forum-people-tag":"1.0","components\/member-profile":"1.0","components\/collection-loader":"1.0","components\/editions":"1.0","components\/brokenlink":"1.0","components\/keep-up":"1.0","components\/buying-cycle":"1.0","components\/discussions":"1.0","components\/latestFromTPR":"1.0","components\/auto-fill":"1.0","components\/video":"1.0","components\/rds":"1.0","components\/vote":"1.0","components\/user-form":"1.0","components\/form-social-legal":"1.0","components\/alert-preferences":"1.0","components\/email-alert":"1.0","components\/modal":"1.0","components\/tooltip":"1.0","components\/sticky-mpu":"1.0"}},"map":{"*":{"gpt":"\/\/www.googletagservices.com\/tag\/js\/gpt.js","livefyre":"http:\/\/zor.livefyre.com\/wjs\/v3.0\/javascripts\/livefyre.js","livefyre-commentcount":"\/\/zor.livefyre.com\/wjs\/v1.0\/javascripts\/CommentCount.js","nrelate":"\/\/c7.static.nrcdn.com\/common_js\/0.52.0\/nr_loader.min.js","urs":"http:\/\/urs.techrepublic.com\/sdk\/urs.js","mpx":"\/\/pdk.theplatform.com\/pdk\/tpPdk.js","apex":"http:\/\/cn.cbsimg.net\/cnwk.1d\/Aud\/javascript\/techrepublic\/apex.js","bounce-ex":"\/\/bounceexchange.com\/tag\/786\/i.js","optimizely":"\/\/cdn.optimizely.com\/js\/535290342.js","outbrain":"\/\/widgets.outbrain.com\/outbrain.js"}}});
+    require(['main.desktop']);
+</script>
+    <!--[if lt IE 9]>
+    <script src="/1.8.5.1/bundles/techrepubliccore/js/libs/html5shiv.js"></script>
+    <![endif]-->
+    
+<!--Visual Revenue Reader Response Tracking Script (v6) -->
+<script type="text/javascript">
+    var _vrq = _vrq || [];
+    _vrq.push(['id', 515]);
+    _vrq.push(['automate', false ]);
+    _vrq.push(['track', function(){}]);
+    (function(d, a){
+    var s = d.createElement(a),
+    x = d.getElementsByTagName(a)[0];
+    s.async = true;
+    s.src = 'http://a.visualrevenue.com/vrs.js';
+    x.parentNode.insertBefore(s, x);
+    })(document, 'script');
+</script>
+<!-- End of VR RR Tracking Script - All rights reserved -->
+
+    
+    </head>
+    <body 
+            data-device='{"type":"desktop"}'
+    data-tracking='{"isEnabled":true,"omniture":{"account":"cbsitechrepublicsite,cbsicbsiall","config":[],"contextData":{"siteId":"techrepublic","channel":"error","pageType":"error_page","siteType":"responsive web","reportSuiteId":"cbsitechrepublicsite","errorCode":"404"}},"dw":{"host":"dw.cbsi.com","pageParams":{"rsid":"cbsitechrepublicsite","pagetype":"error_page","siteid":11,"sitetype":"responsive web","devicetype":"desktop"}},"clickTale":{"partition":"09","ptcId":"f4bac7c1-80d7-4c4a-99b2-7636f1b6fcb5"}}'
+    data-ad='{"gpt":{"targeting":{"device":"desktop","ptype":"error_page","cid":"","env":"prod"},"adConfig":{"network":{"dev":7336,"qa":8264,"ci":8264,"utest":8264,"staging":8264,"prod":8264},"method":"async","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","it","de","fr","nl","be"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","th","id","ph","hk","vn","in","tw"]}],"adUnits":{"intromercial":{"outOfPage":true},"skin":{"sizes":[[1600,1000]],"position":"top","eventCallbacks":{"slotRenderEnded":"skinCallback"}},"hotspot":{"sizes":[165,421]},"multiplexer":{"sizes":[460,170]},"resourceCenterTop":{"sizes":[300,261],"position":"top"},"resourceCenterBottom":{"sizes":[300,261],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250],[300,1050]],"position":"top"},"marqueeTop":{"sizes":[300,60],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250],[970,150]],"position":"top","eventCallbacks":{"slotRenderEnded":"leaderboardTopCallback"}},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom","eventCallbacks":{"slotRenderEnded":"leaderboardTopCallback"}},"buttonTop":{"sizes":[[88,31]],"position":"top"},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"},"vendorTextLink":{"sizes":[300,450],"position":"top"}},"mobile":{"adUnits":{"hpto":{"outOfPage":true},"mobileBannerTop":{"sizes":[[6,1],[320,50]],"position":"top"},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[300,250]}}},"tablet":{"adUnits":{"intromercial":{"outOfPage":true},"hotspot":{"sizes":[165,421]},"multiplexer":{"sizes":[460,170]},"resourceCenterTop":{"sizes":[300,261],"position":"top"},"resourceCenterBottom":{"sizes":[300,261],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250],[300,1050]],"position":"top"},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[728,90],"position":"bottom"},"leaderPlusTop":{"sizes":[728,90],"position":"top"},"mpuMiddle":{"sizes":[[300,250]],"position":"middle"}}},"siteName":"techrepublic","collapseEmptyDiv":false,"setRefreshUnfilledSlots":true,"setClearUnfilledSlots":false,"disableInitialLoad":false,"disableInitialLoadCompanions":false,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw"},"containerId":"53d61f7358f2f","slotVars":{"network":"8264","siteName":"techrepublic","collapseEmptyDiv":"","topics":"","platform":"desktop"},"adType":"gpt"},"cookieName":"techrepublic_ad","blueKai":{"bkSiteId":3318,"limit":4,"ch":"error","site":"cbsitechrepublicsite","ptype":"error_page"}}'
+    data-img-res='{"breakpoint":620,"cookieName":"fly_img","breakpointOptions":null,"pixelRatio":1,"pixelRatioOptions":[1]}'
+    data-user='{"baseUrl":"https:\/\/secure.techrepublic.com","siloId":3}'
+    data-social-auth='{"appId":27006,"environment":"DEV"}'
+            data-component='livefyreCommentcount' 
+                        >
+                            <noscript><img src="http://pixel.everesttech.net/4083/v?" width="1" height="1"/></noscript>
+                <header class="page-header">
+    <div class="masthead">
+        <div class="container">
+            <div id="site-logo"><a href="/" class="nav-logo"><span class="header-logo">TechRepublic</span></a></div>
+            <div id="site-editions" data-component="dropdown" class="dropdown"><a class="nav-edition" data-item="trigger">U.S. <span class="header-arrow"></span></a>
+                <div class="dropdown-content dropdown-menu">
+                    <ul data-component='editions' >
+                        <li><a data-edition-set="au">Australia</a></li>
+                        <li><a data-edition-set="uk">United Kingdom</a></li>
+                        <li><a data-edition-set="us">United States</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="site-member" data-component="dropdown" class="dropdown">
+                <div data-user-view="loggedOut">
+                    <a href="https://secure.techrepublic.com/user/login/?appId=27006" data-user-show-params='{"appId":27006}' data-user-show="login" class="nav-button"><span class="header-member">Membership</span></a>
+                </div>
+
+                <div data-user-view="loggedIn">
+                    <a class="nav-button" data-item="trigger">
+                        <span class="header-member-logged-in">Membership</span>
+                    </a>
+                    <div class="dropdown-content dropdown-menu logged-in">
+                        <div class="member-profile">
+                            <a href="/members/profile/" class="avatar">
+                                <img data-user-var="gravatarUrl" data-user-var-attr="src" src="/1.8.5.1/bundles/techrepubliccore/images/icons/standard/icon-user-default.png" width="60" height="60" />
+                            </a>
+                            <p class="member-name" data-user-var="userName"></p>
+                            <a href="/members/profile/">My Profile</a>
+                        </div>
+                        <nav class="member-nav">
+                            <ul>
+                                <li><a href="/members/contacts/">People</a></li>
+                                <li><a href="/newsletters/">Subscriptions</a></li>
+                                <li><a href="/members/discussions/">My stuff</a></li>
+                                <li><a href="/members/pro/">Purchases</a></li>
+                                <li><a href="/members/preferences/">Preferences</a></li>
+                                <li><a href="/members/message/">Send a message</a></li>
+                                <li><a href="/user/logout/" data-omniture-track="logout">Log Out</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="site-menu" data-component="dropdown" class="dropdown"><a class="nav-button" data-item="trigger"><span class="header-menu">Menu</span></a>
+                <div class="dropdown-content dropdown-menu">
+                    <nav class="topic-nav">
+                        <p><strong>Topics</strong></p>
+                        <ul>
+                                                                                                                        <li><a href="/topic/cxo/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>CXO</a></li>
+                                                                                                    <li><a href="/topic/software/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Software</a></li>
+                                                                                                    <li><a href="/topic/start-ups/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Startups</a></li>
+                                                                                                    <li><a href="/topic/cloud/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Cloud</a></li>
+                                                                                                    <li><a href="/topic/data-centers/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Data Center</a></li>
+                                                                                                    <li><a href="/topic/mobility/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Mobile</a></li>
+                                                                                                    <li><a href="/topic/microsoft/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Microsoft</a></li>
+                                                                                                    <li><a href="/topic/apple/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Apple</a></li>
+                                                                                                    <li><a href="/topic/google/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Google</a></li>
+                                                </ul>
+                    </nav>
+                    <nav class="section-nav">
+                        <p><strong>Sections</strong></p>
+                        <ul>
+                                                                                                                                                                                                                                    <li><a href="/topic/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>All Topics</a></li>
+                                                                                                                                                                                                                                                            <li><a href="/newsletters/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Newsletters</a></li>
+                                                                                                                                                                                                                                                            <li><a href="/pictures/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Photos</a></li>
+                                                                                                                                                                                                                                                            <li><a href="/forums/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Forums</a></li>
+                                                                                                                                                                                                                                                            <li><a href="/resource-library/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Resource Library</a></li>
+                                                                                                                                                                                                                                                            <li><a href="http://www.techproresearch.com/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Research</a></li>
+                                                                                                                                                                                                            </ul>
+                    </nav>
+                    <nav class="edition-nav">
+                        <p><strong>Editions</strong></p>
+                        <ul data-component='editions' data-editions-options='{"url":"\/switch_edition\/"}'>
+                            <li><a data-edition-set="au">Australia</a></li>
+                            <li><a data-edition-set="uk">United Kingdom</a></li>
+                            <li><a data-edition-set="us">United States</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="secondary-nav">
+                <nav>
+                    <ul>
+                                                                                                                                                                                                            <li><a href="/topic/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>All Topics</a></li>
+                                                                                                                                                                                                                                    <li><a href="/newsletters/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Newsletters</a></li>
+                                                                                                                                                                                                                                    <li><a href="/pictures/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Photos</a></li>
+                                                                                                                                                                                                                                    <li><a href="/forums/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Forums</a></li>
+                                                                                                                                                                                                                                    <li><a href="/resource-library/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Resource Library</a></li>
+                                                                                                                                                                                                                                    <li><a href="http://www.techproresearch.com/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-SectionNav"}'>Research</a></li>
+                                                                                                                                                                                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="primary-nav">
+        <div class="container">
+            <form id="site-search" action="/search/">
+                <fieldset>
+                    <input name="q" placeholder="Search TechRepublic" type="text" value="">
+                    <button class="header-search" type="submit">Search</button>
+                </fieldset>
+            </form>
+            <nav id="site-topics">
+                <ul>
+                                                                                                                <li><a href="/topic/cxo/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>CXO</a></li>
+                                                                                                    <li><a href="/topic/software/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Software</a></li>
+                                                                                                    <li><a href="/topic/start-ups/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Startups</a></li>
+                                                                                                    <li><a href="/topic/cloud/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Cloud</a></li>
+                                                                                                    <li><a href="/topic/data-centers/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Data Center</a></li>
+                                                                                                    <li><a href="/topic/mobility/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Mobile</a></li>
+                                                                                                    <li><a href="/topic/microsoft/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Microsoft</a></li>
+                                                                                                    <li><a href="/topic/apple/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Apple</a></li>
+                                                                                                    <li><a href="/topic/google/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Header-TopicNav"}'>Google</a></li>
+                                        </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <div id="mantle_skin">
+                        <div class="intromercial">
+        <div id="intromercial-53d61f7358f2f" class="ad-intromercial" data-ad="intromercial"></div>
+    </div>
+        
+                        <div class="skin">
+            <div id="skin-53d61f7358f2f" class="ad-skin" data-ad="skin"></div>
+    </div>
+            <div class="hpto">
+	
+</div>        
+                        <section class="leader leader-top ad-active">
+        <div class="container">
+            <div id="leader-plus-top-53d61f7358f2f" class="ad-leader-plus-top" data-ad="leader-plus-top"></div>
+        </div>
+    </section>
+                    
+                    <div id="content" class="container">
+                    <header class="page-heading">
+        							<h1 class="title">Nothing to see here folks</h1>
+					    </header>
+
+	<div class="row">
+		<div class="col-main">
+						<div class="row fourofour">
+				<div class="col-4"> 
+					<h2 class="message">Oops! Looks like this page has been removed or no longer exists... </h2> 
+            		<h2 class="message">*scratches head*</h2>
+				</div>
+            	<div class="col-4">
+						<section class="module col-4">
+							<div class="section-heading">
+								<h2>What's my next step?</h2>
+							</div>
+							
+							<div class="item-list">
+								<ul class="items">
+									<li>
+										<h3 class="title"><a href="/">Return to the homepage</a></h3>
+									</li>
+									<li>
+										<h3 class="title"><a href="/meet-the-team">Meet the TechRepublic team</a></h3>
+									</li>
+									
+									<li>
+										<h3 class="title"><a rel="no follow" href="/newsletters/">Visit the Subscription Center</a></h3>
+									</li>
+									
+									<li>
+										<h3 class="title"><a href="/search/">Search the site</a></h3>
+									</li>
+								</ul>
+							</div>
+						</section>
+				</div>			
+		</div>
+		<section class="site-search">
+			<h2>Search TechRepublic</h2>
+				<form id="site-search" action="/search/">
+						<input name="q" placeholder="Search TechRepublic" type="text" value="">
+						<button class="btn" type="submit">Search</button>
+            	</form>
+		</section>	
+													<section id="feature-hubs" data-vr-zone="Feature Hubs">
+    <div class="section-heading">
+                        <h2>
+                
+                <span class="heading">Editor&#039;s Picks</span>
+            </h2>
+                
+        
+    </div>
+
+    	<div class="item-list">
+		<div class="row">
+		  
+
+
+
+    
+	<div class="item" data-vr-contentbox="">
+		<div>
+							<a class="thumbnail" href="/article/how-sports-teams-are-scrambling-to-keep-millennials-coming-to-games/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>
+			
+                                    <span class="img "><img src="http://tr2.cbsistatic.com/hub/i/r/2014/04/10/c04f3923-cfab-49db-8757-e3a27c84f003/thumbnail/140x105/462923618368e9ea8e3449acc958e3d2/gillette-flyover.jpg" alt="" 
+                                 /></span>
+
+            			</a>
+		</div>
+		<p class="title">
+							<a href="/article/how-sports-teams-are-scrambling-to-keep-millennials-coming-to-games/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>Stadiums race to digitize and connect Millennials</a>
+					</p>
+	</div>
+
+	
+
+    
+	<div class="item" data-vr-contentbox="">
+		<div>
+							<a class="thumbnail" href="/article/how-big-data-is-going-to-help-feed-9-billion-people-by-2050/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>
+			
+                                    <span class="img "><img src="http://tr2.cbsistatic.com/hub/i/r/2014/05/07/219149ed-9139-40be-a2d6-78b45f7a5966/thumbnail/140x105/8bde123931a3bdaf0e743bf68b944b54/hero1.jpg" alt="" 
+                                 /></span>
+
+            			</a>
+		</div>
+		<p class="title">
+							<a href="/article/how-big-data-is-going-to-help-feed-9-billion-people-by-2050/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>Big data will help feed nine billion people by 2050</a>
+					</p>
+	</div>
+
+	
+
+    
+	<div class="item" data-vr-contentbox="">
+		<div>
+							<a class="thumbnail" href="/article/robot-restaurants-and-sci-fi-kitchens-how-tech-is-changing-the-way-we-eat/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>
+			
+                                    <span class="img "><img src="http://tr1.cbsistatic.com/hub/i/r/2014/06/25/701cc05b-bfd8-445a-9cbc-7d29618be0e7/thumbnail/140x105/da8d2fccb53a25c12e2af1f1bba7e810/foodini2.jpg" alt="" 
+                                 /></span>
+
+            			</a>
+		</div>
+		<p class="title">
+							<a href="/article/robot-restaurants-and-sci-fi-kitchens-how-tech-is-changing-the-way-we-eat/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>How tech is changing the way we eat</a>
+					</p>
+	</div>
+
+	
+
+    
+	<div class="item" data-vr-contentbox="">
+		<div>
+							<a class="thumbnail" href="/article/the-google-fiber-lottery/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>
+			
+                                    <span class="img "><img src="http://tr2.cbsistatic.com/hub/i/r/2014/04/25/449581a2-098f-4aca-9602-c18023dac777/thumbnail/140x105/abcab996e3984f6775651d9b8ea10535/dalles-oregon-google-data-center-cables.jpg" alt="" 
+                                 /></span>
+
+            			</a>
+		</div>
+		<p class="title">
+							<a href="/article/the-google-fiber-lottery/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Editor-Picks"}'>Google&#039;s Fiber lottery: Predicting who&#039;s next</a>
+					</p>
+	</div>
+
+	
+		</div>
+	</div></section>									</div>
+		
+		<aside class="col-secondary">
+			
+			<section class="mpu ad-active">
+    <div id="mpu-plus-top-53d61f7358f2f" class="ad-mpu-plus-top" data-ad="mpu-plus-top"></div>
+</section>
+
+			
+			    <section class="mpu ad-active">
+            <div id="mpu-bottom-53d61f7358f2f" class="ad-mpu-bottom" data-ad="mpu-bottom"></div>
+    </section>
+
+			        </aside>
+    </div>
+            </div>
+        
+                        <section class="leader leader-bottom ad-active">
+        <div class="container">
+            <div id="leader-top-53d61f7358f2f" class="ad-leader-top" data-ad="leader-top"></div>
+        </div>
+    </section>
+            </div>
+
+            
+<footer class="page-footer">
+    <div class="footer-nav">
+        <div class="container">
+            <div class="row">
+                                    <div class="col-featured-articles">
+                        <h2>Latest on Tech Pro Research</h2>
+                        <div class="">
+                                                                                                <article>
+                                        										                                        <div><a href="http://www.techproresearch.com/downloads/event-triggers-toolkit/" class="thumbnail"><img src="http://b2b.cbsimg.net/images/pro/pol12.jpg" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "TechPro-Latest"}' alt="" width="140" height="105" /></a></div>
+                                        <p class="title"><a href="http://www.techproresearch.com/downloads/event-triggers-toolkit/">Toolkit: Use event triggers to monitor Windows servers</a></p>
+                                    </article>
+                                                                                                                                <article>
+                                        										                                        <div><a href="http://www.techproresearch.com/downloads/hybrid-cloud-benefits-roadblocks-favored-vendors/" class="thumbnail"><img src="http://b2b.cbsimg.net/images/pro/cloud8.jpg" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "TechPro-Latest"}' alt="" width="140" height="105" /></a></div>
+                                        <p class="title"><a href="http://www.techproresearch.com/downloads/hybrid-cloud-benefits-roadblocks-favored-vendors/">Hybrid Cloud: Benefits, roadblocks, favored vendors</a></p>
+                                    </article>
+                                                                                                                                <article>
+                                        										                                        <div><a href="http://www.techproresearch.com/downloads/employee-non-compete-agreement-policy/" class="thumbnail"><img src="http://b2b.cbsimg.net/images/pro/lead6.jpg" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "TechPro-Latest"}' alt="" width="140" height="105" /></a></div>
+                                        <p class="title"><a href="http://www.techproresearch.com/downloads/employee-non-compete-agreement-policy/">Employee Non-Compete Agreement Policy</a></p>
+                                    </article>
+                                                                                                                                <article>
+                                        										                                        <div><a href="http://www.techproresearch.com/downloads/software-procurement-policy/" class="thumbnail"><img src="http://b2b.cbsimg.net/images/pro/AB_apple_influx.png" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "TechPro-Latest"}' alt="" width="140" height="105" /></a></div>
+                                        <p class="title"><a href="http://www.techproresearch.com/downloads/software-procurement-policy/">Software Procurement Policy</a></p>
+                                    </article>
+                                                                                    </div>
+                    </div>
+                                
+                <div class="col-sitemap">
+                    <div class="explore">
+                        <h2>Explore</h2>
+                        <ul>
+                            <li><a href="/blog/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Blogs</a></li>
+                            <li><a href="/resource-library/downloads/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Downloads</a></li>
+                            <li><a href="/forums/questions/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Q&amp;A</a></li>
+                            <li><a href="/forums/discussions/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Discussions</a></li>
+                            <li><a href="/meet-the-team/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Meet the Team</a></li>
+                            <li><a href="http://www.techproresearch.com/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Tech Pro Research</a></li>
+                            <li><a href="/resource-library/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Resource Library</a></li>
+                            <li><a href="/pictures/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Photos</a></li>
+                            <li><a href="/videos/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Explore"}'>Videos</a></li>
+                        </ul>
+                    </div>
+                    <div class="services">
+                        <h2>Services</h2>
+                        <ul>
+                            <li><a href="/about/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>About Us</a></li>
+                            <li><a href="https://secure.techrepublic.com/user/registration/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Membership</a></li>
+                            <li><a href="/newsletters/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Newsletters</a></li>
+                            <li><a href="/rssfeeds/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>RSS Feeds</a></li>
+                            <li><a href="/site-map/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Site Map</a></li>
+                            <li><a href="https://cbsi.secure.force.com/CBSi/knowledgehome?referer=techrepublic.com " data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Site Help &amp; Feedback</a></li>
+                            <li><a href="/faq/general/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>FAQ</a></li>
+                            <li><a href="/advertise/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Advertise</a></li>
+                            <li><a href="/reprints/" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Services"}'>Reprint Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="legal">&copy; 2014 CBS Interactive. All rights reserved.  <a href="http://legalterms.cbsinteractive.com/privacy" rel="nofollow" target="_blank">Privacy Policy</a> | <a href="http://legalterms.cbsinteractive.com/cookies" rel="nofollow" target="_blank">Cookies</a> | <a href="http://legalterms.cbsinteractive.com/adchoice" rel="nofollow" target="_blank">Ad Choice</a> | <a href="http://legalterms.cbsinteractive.com/terms-of-use" rel="nofollow" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Rubics"}' target="_blank">Terms of Use</a> | <a href="http://legalterms.cbsinteractive.com/eula" rel="nofollow" target="_blank">Mobile User Agreement</a></div>
+            <div class="sites"><a href="http://www.zdnet.com" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Rubics"}'>A ZDNet site</a> | Visit other CBS Interactive sites:
+                <form name="">
+                    <select name="target" onchange="if (this.value.indexOf('http') != -1) { window.location.href=this.value; }" data-omniture-track='moduleClick' data-omniture-track-data='{"moduleInfo": "Footer-Rubics"}'>
+                        <option selected="selected" value="">Select Site</option>
+                        <option value="http://www.cbscares.com">CBS Cares</option>
+                        <option value="http://www.cbsfilms.com">CBS Films</option>
+                        <option value="http://www.cbsradio.com/streaming/index.html">CBS Radio</option>
+                        <option value="http://www.cbs.com">CBS.com</option>
+                        <option value="http://www.cbsinteractive.com">CBS Interactive</option>
+                        <option value="http://www.cbsnews.com">CBSNews.com</option>
+                        <option value="http://www.cbssports.com">CBSSports.com</option>
+                        <option value="http://www.chow.com">CHOW</option>
+                        <option value="http://www.clicker.com">Clicker</option>
+                        <option value="http://www.cnet.com">CNET</option>
+                        <option value="http://collegenetwork.cbssports.com">College Network</option>
+                        <option value="http://www.gamespot.com">GameSpot</option>
+                        <option value="http://www.last.fm">Last.fm</option>
+                        <option value="http://www.maxpreps.com">MaxPreps</option>
+                        <option value="http://www.metacritic.com">Metacritic.com</option>
+                        <option value="http://www.cbsnews.com/moneywatch/">Moneywatch</option>
+                        <option value="http://www.mysimon.com">mySimon</option>
+                        <option value="http://www.radio.com">Radio.com</option>
+                        <option value="http://www.search.com">Search.com</option>
+                        <option value="http://www.shopper.com">Shopper.com</option>
+                        <option value="http://www.sho.com">Showtime</option>
+                        <option value="http://www.smartplanet.com">SmartPlanet</option>
+                        <option value="http://www.techproresearch.com">Tech Pro Research</option>
+                        <option value="http://www.techrepublic.com">TechRepublic</option>
+                        <option value="http://www.theinsider.com">The Insider</option>
+                        <option value="http://www.tv.com">TV.com</option>
+                        <option value="http://www.urbanbaby.com">UrbanBaby.com</option>
+                        <option value="http://www.zdnet.com">ZDNet</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <script type='text/javascript'>
+    var b=document.createElement("script");
+    b.type="text/javascript";
+    b.async=!0;
+    var c=["http://988e3b255aa765925d6b-662669ee3e2497ef5de1fff529ecac92.r54.cf2.rackcdn.com","https://1a1d70f8e97771f9fab1-662669ee3e2497ef5de1fff529ecac92.ssl.cf2.rackcdn.com"];
+    b.src=("https:"==document.location.protocol?c[1]:c[0])+"/ba3zi27t2tcg.js";
+    var d=document.getElementsByTagName("script")[0];
+    d.parentNode.insertBefore(b,d);
+</script>
+    </body>
+</html>

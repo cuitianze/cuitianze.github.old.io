@@ -1,0 +1,278 @@
+/**
+* homepage.css
+* http://cuitianze.github.io
+* author: cuitianze
+* date: 2014.7.30
+*/
+
+/******************************引入字体********************************/
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/******************************重置样式*******************************/
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 100%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif, '微软雅黑';
+  color: #f2ede3;
+}
+
+a {
+  padding: 0 5px;
+  color: #f0f0f0;
+  font-size: 80%;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #fff;
+}
+/****************************** container ********************************/
+.container {
+  height: 100%;
+}
+
+/******************************** 整个page的一个大框，和四个小框 *******************************/
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main > section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+}
+
+.main > section:first-child {
+  top: 0;
+  left: 0;
+  background: #f06060;
+}
+
+.main > section:nth-child(2) {
+  top: 0;
+  left: 50%;
+  background: #fa987d;
+}
+
+.main > section:nth-child(3) {
+  top: 50%;
+  left: 0;
+  background: #72cca7;
+}
+
+.main > section:nth-child(4) {
+  top: 50%;
+  left: 50%;
+  background: #10a396;
+}
+/*********************************** 四个小框里的 内容 ********************************************/
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 1;
+  /* Centering with flexbox */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.box h2 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+/***********四个box图标*************/
+.icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon:before {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.icon-about:before {
+  content: "\e000";
+}
+.icon-subject:before {
+  content: "\e001";
+}
+.icon-blog:before {
+  content: "\e002";
+}
+.icon-contact:before {
+  content: "\e003";
+}
+
+
+.main > section .icon-close {
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.icon-close:before {
+  content: "/e005";
+}
+
+.content {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  padding: 0 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/**************************************Transition*****************************************/
+.main > section {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.main > section.expand {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.main > section.expand-top {
+  z-index: 99;
+}
+
+.main > section:first-child.expand {
+  background: #EE4444;
+}
+.main > section:nth-child(2).expand {
+  background: #F98262;
+}
+.main > section:nth-child(3).expand {
+  background: #4BBE8E;
+}
+.main > section:nth-child(4).expand {
+  background: #0D8278;
+}
+
+.main.expand-item > section:not(.expand),
+.main.expand-item > section.scale-down {
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.box {
+  -webkit-transition: opacity 0.2s linear 0.5s;
+  -moz-transition: opacity 0.2s linear 0.5s;
+  transform: opacity 0.2s linear 0.5s;
+}
+
+section.expand .box {
+  opacity: 0;
+  -webkit-transition: opacity 0s linear;
+  -moz-transition: opacity 0s linear;
+  transition: opacity 0s linear;
+}
+
+.box h2 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.no-touch section:not(.expand) .box:hover h2 {
+  -webkit-transform: translateY(-15px);
+  -moz-transform: translateY(-15px);
+  transform: translateY(-15px);
+}
+
+/*@media screen and (max-width: 46.5em) {
+  .content,
+  .box {
+    font-size: 75%;
+  }
+  .expand .box {
+    height: 130px;
+  }
+  .content > ul li {
+    width: 40%;
+  }
+}*/

@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4 -->
+<html itemscope="" itemtype="http://schema.org/" lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta charset="utf-8">
+	<!--
+	                                 __                __
+	                                /  |              /  |
+	  _______   _______   ______   _$$ |_     _______ $$ |____
+	 /       | /       | /      \ / $$   |   /       |$$      \
+	/$$$$$$$/ /$$$$$$$/ /$$$$$$  |$$$$$$/   /$$$$$$$/ $$$$$$$  |
+	$$      \ $$ |      $$ |  $$ |  $$ | __ $$ |      $$ |  $$ |
+	 $$$$$$  |$$ \_____ $$ \__$$ |  $$ |/  |$$ \_____ $$ |  $$ |
+	/     $$/ $$       |$$    $$/   $$  $$/ $$       |$$ |  $$ |
+	$$$$$$$/   $$$$$$$/  $$$$$$/     $$$$/   $$$$$$$/ $$/   $$/   4 life
+	-->
+	<title>Build a RESTful API Using Node and Express 4 ♥ Scotch</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/build-a-restful-api-using-node-and-express-4"></script><script async="" type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/gpt.js"></script><script type="text/javascript" async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/inpage_linkid.js" id="undefined"></script><script src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/cb=gapi.loaded_1" async=""></script><script src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/dc.js"></script><script type="text/javascript" async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/platform.js" gapi_processed="true"></script><script async="" type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/ca-pub-4625466825098355.js"></script><script id="twitter-wjs" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/widgets.js"></script><script id="facebook-jssdk" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/all.js"></script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UA4DU1JRGwADUVJQDwQ="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e){function n(t,e,n){n||(n={});for(var r=o[t],a=r&&r.length||0,s=n[i]||(n[i]={}),u=0;a>u;u++)r[u].apply(s,e);return s}function r(t,e){var n=o[t]||(o[t]=[]);n.push(e)}var o={},i="nr@context";e.exports={on:r,emit:n}},{}],2:[function(t){function e(t,e,n,i,s){return u?u-=1:r("err",[s||new UncaughtException(t,e,n)]),"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t(5),a=window.onerror,s=!1,u=0;t("loader").features.push("err"),window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(d){"stack"in d&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(4),s=!0)}i.on("fn-start",function(){s&&(u+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&u>0&&(u-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:4,3:3,4:6,5:1,6:14,handle:"D5DuLP",loader:"G9z0Bl"}],3:[function(t){function e(t){r.inPlace(t,["addEventListener","removeEventListener"],"-",n)}function n(t){return t[1]}var r=t(1),o=(t(3),t(2));if(e(window),"getPrototypeOf"in Object){for(var i=document;i&&!i.hasOwnProperty("addEventListener");)i=Object.getPrototypeOf(i);i&&e(i);for(var a=XMLHttpRequest.prototype;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&e(a)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&e(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=r(e,"fn-"):"function"==typeof e.handleEvent&&r.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:15,2:1,3:14}],4:[function(t){var e=(t(3),t(1)),n=t(2);e.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=e(t[0],"fn-")})},{1:15,2:1,3:14}],5:[function(t){function e(t){var e=t[0];"string"==typeof e&&(e=new Function(e)),t[0]=n(e,"fn-")}var n=(t(3),t(1)),r=t(2);n.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",e)},{1:15,2:1,3:14}],6:[function(t){function e(){o.inPlace(this,s,"fn-")}function n(t,e){o.inPlace(e,["onreadystatechange"],"fn-")}function r(t,e){return e}var o=t(1),i=t(2),a=window.XMLHttpRequest,s=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];window.XMLHttpRequest=function(t){var n=new a(t);try{i.emit("new-xhr",[],n),o.inPlace(n,["addEventListener","removeEventListener"],"-",function(t,e){return e}),n.addEventListener("readystatechange",e,!1)}catch(r){try{i.emit("internal-error",r)}catch(s){}}return n},window.XMLHttpRequest.prototype=a.prototype,o.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",r),i.on("send-xhr-start",n),i.on("open-xhr-start",n)},{1:15,2:1}],7:[function(t){function e(){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;u>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,d="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=e(d);if(f&&(r.rxSize=f),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}t("loader").features.push("xhr");var o=t("handle"),i=t(1),a=t(5),s=["load","error","abort","timeout"],u=s.length,d=t(2);t(3),t(4),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var d=e(o);d&&(r.txSize=d)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var f=0;u>f;f++)n.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&e()},{1:8,2:11,3:3,4:6,5:1,handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e){var n=r[t];return n?n.apply(this,e):(o[t]||(o[t]=[]),void o[t].push(e))}var r={},o={};e.exports=n,n.queues=o,n.handlers=r},{}],11:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&u&&u.body){p.proto="https"===c.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=u.createElement("script");e.src=p.proto+t.agent,u.body.appendChild(e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,u=s.document,d="addEventListener",f="attachEvent",c=(""+location).split("?")[0],p=e.exports={offset:i(),origin:c,features:[]};u[d]?(u[d]("DOMContentLoaded",o,!1),s[d]("load",n,!1)):(u[f]("onreadystatechange",r),s[f]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],14:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],15:[function(t,e){function n(t,e,r,s){function nrWrapper(){try{var n,a=u(arguments),d=this,f=r&&r(a,d)||{}}catch(c){i([c,"",[a,d,s],f])}o(e+"start",[a,d,s],f);try{return n=t.apply(d,a)}catch(p){throw o(e+"err",[a,d,p],f),p}finally{o(e+"end",[a,d,n],f)}}return a(t)?t:(e||(e=""),nrWrapper[n.flag]=!0,nrWrapper)}function r(t,e,r,o){r||(r="");var i,s,u,d="-"===r.charAt(0);for(u=0;u<e.length;u++)s=e[u],i=t[s],a(i)||(t[s]=n(i,d?s+r:r,o,s,t))}function o(t,e,n){try{s.emit(t,e,n)}catch(r){i([r,t,e,n])}}function i(t){try{s.emit("internal-error",t)}catch(e){}}function a(t){return!(t&&"function"==typeof t&&t.apply&&!t[n.flag])}var s=t(1),u=t(2);e.exports=n,n.inPlace=r,n.flag="nr@wrapper"},{1:1,2:14}]},{},["G9z0Bl",2,7]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!-- RSS -->
+	<link rel="alternate" type="application/rss+xml" title="Scotch ♥ Developers bringing fire to the people." href="http://scotch.io/feed">
+
+	<!-- ICONS/TILES/WHATEVER REALLY NEED A MORE UNIVERSAL STANDARD -->
+	<link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="http://scotch.io/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-57.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-152.png">
+	<meta name="application-name" content="Scotch Web Development">
+	<meta name="msapplication-TileImage" content="http://scotch.io/wp-content/themes/scotch-twentyfive/img/icons/favicon-144.png">
+	<meta name="msapplication-TileColor" content="#2A2A2A">
+
+	<!-- MUST PLEASE EVERYONE -->
+
+		<!-- SEARCH ENGINES -->
+		<meta name="author" content="Chris Sevilleja">
+		<meta name="description" content="With the release of Express 4.0 just a few days ago, lots of our Node apps will have some changes in how they handle routing. With the changes in the Express Router, we have more flexibility in how we can...">
+		<link rel="canonical" href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/Build a RESTful API Using Node and Express 4 ♥ Scotch.html">
+
+		<!-- THE TWITTER MACHINE -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@scotch_io">
+		<meta name="twitter:creator" content="sevilayha">
+		<meta name="twitter:title" content="Build a RESTful API Using Node and Express 4">
+		<meta name="twitter:description" content="With the release of Express 4.0 just a few days ago, lots of our Node apps will have some changes in how they handle routing. With the changes in the Express Router, we have more flexibility in how we can...">
+		<meta name="twitter:image:src" content="http://scotch.io/wp-content/uploads/2014/04/restful-api-node-express-4-router.jpg">
+
+		<!-- FACESPACE -->
+		<meta property="fb:admins" content="579622216,709634581">
+	 	<meta property="fb:app_id" content="1389892087910588">
+	 	<meta property="og:url" content="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4">
+	 	<meta property="og:type" content="article">
+	 	<meta property="og:title" content="Build a RESTful API Using Node and Express 4">
+		<meta property="og:image" content="http://scotch.io/wp-content/uploads/2014/04/restful-api-node-express-4-router.jpg">
+	 	<meta property="og:description" content="With the release of Express 4.0 just a few days ago, lots of our Node apps will have some changes in how they handle routing. With the changes in the Express Router, we have more flexibility in how we can...">
+	 	<meta property="og:site_name" content="Scotch">
+	 	<meta property="article:author" content="http://facebook.com/sevilayha">
+	 	<meta property="article:publisher" content="https://www.facebook.com/scotchdevelopment">
+
+	 	<!-- G++ -->
+	 	<meta itemprop="name" content="Build a RESTful API Using Node and Express 4">
+	 	<meta itemprop="description" content="With the release of Express 4.0 just a few days ago, lots of our Node apps will have some changes in how they handle routing. With the changes in the Express Router, we have more flexibility in how we can...">
+		<meta itemprop="image" content="http://scotch.io/wp-content/uploads/2014/04/restful-api-node-express-4-router.jpg">
+
+
+	<!-- SCROLLS -->
+	<!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" href="http://scotch.io/wp-content/themes/scotch-twentyfive/css/complete.css">
+	<link rel="stylesheet" href="http://scotch.io/wp-content/themes/scotch-twentyfive/style.css">
+
+	<!-- BEGIN UGLY WP HEAD FORMATTING -->
+	<link rel="stylesheet" id="yarppWidgetCss-css" href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/widget.css" type="text/css" media="all">
+<script type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/complete.js"></script>
+<script type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/allthatpower.js"></script>
+
+			<!-- CUSTOM FIELDS CSS -->
+
+
+		<!-- CUSTOM FIELDS JS -->
+
+
+
+<script async="" type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/count.js"></script><script type="text/javascript" async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/embed.js"></script><script async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/count-data.js"></script><script type="text/javascript" async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/bsa.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style><script type="text/javascript" id="_bsap_js_8321ee0e3825ae084dc5408db80d21db" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/s_8321ee0e3825ae084dc5408db80d21db.js" async="async"></script><style type="text/css" id="bsa_css">div.bsap_1291897{width:300px;display:block}div.bsap_1291897 a{width:300px}div.bsap_1291897 a img{padding:0}div.bsap_1291897 a em{font-style:normal}div.bsap_1291897 a{}div.bsap_1291897 img{border:0;clear:right;margin-bottom:10px;}div.bsap_1291897 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1291897 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1291897 iframe{}div.bsap_1291897 a{line-height:100%}div.bsap_1291897 a.adhere{width:300px;height:250px;line-height:2000%}html>body div.bsap_1291897 a.adhere{width:298px;height:248px}div.bsap_1291897 img.s{height:0;width:0}div.bsap_1291897{line-height:9px}div.bsap_1291897 .bsap_adhere a{height:19px;width:298px;font-size:10px;background:#f1f1f1;border:1px solid #e1e1e1;border-top:none;border-bottom-left-radius:4px;-moz-border-radius-bottomleft:4px;-webkit-border-bottom-left-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;text-shadow:1px 1px 0 #fff;line-height:16px}.bsap_backfillframe{border:0}div.bsap_1291908{width:100%;display:block}div.bsap_1291908 a{width:125px}div.bsap_1291908 a img{padding:0}div.bsap_1291908 a em{font-style:normal}div.bsap_1291908 a{;float:none;margin-right:10px;margin-left:10px;float:left;margin-bottom:10px;}div.bsap_1291908 img{border:0;clear:right;}div.bsap_1291908 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1291908 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1291908 iframe{;float:none;margin-right:10px;margin-left:10px;float:left;margin-bottom:10px;}div.bsap_1291908 a{line-height:100%}div.bsap_1291908 a.adhere{width:125px;height:125px;line-height:1000%}html>body div.bsap_1291908 a.adhere{width:123px;height:123px}div.bsap_1291908 img.s{height:0;width:0}div.bsap_1293057{width:300px;display:block}div.bsap_1293057 a{width:300px}div.bsap_1293057 a img{padding:0}div.bsap_1293057 a em{font-style:normal}div.bsap_1293057 a{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1293057 img{border:0;clear:right;}div.bsap_1293057 a.adhere{color:#666;font-weight:bold;font-size:12px;border:1px solid #ccc;background:#e7e7e7;text-align:center;}div.bsap_1293057 a.adhere:hover{border:1px solid #999;background:#ddd;color:#333;}div.bsap_1293057 iframe{display:block;font-size:11px;color:#888;font-family:verdana,sans-serif;margin:0;text-align:center;text-decoration:none;overflow:hidden;}div.bsap_1293057 a{line-height:100%}div.bsap_1293057 a.adhere{width:300px;height:250px;line-height:2000%}html>body div.bsap_1293057 a.adhere{width:298px;height:248px}div.bsap_1293057 img.s{height:0;width:0}</style><script async="" type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/pubads_impl_42.js"></script></head>
+<body class="single single-post postid-2566 single-format-standard" data-twttr-rendered="true">
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/DhmkJ2TR0QN.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/DhmkJ2TR0QN(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<script>
+		window.fbAsyncInit = function() {
+			// init the FB JS SDK
+			FB.init({
+				appId      : '1389892087910588',
+				status     : false,
+				xfbml      : true
+			});
+		};
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+<div id="header">
+	<nav id="main-nav">
+		<ul class="text-center">
+			<li id="nav-logo"><a id="logo" href="http://scotch.io/">Scotch</a></li>
+			<li id="bar-talk-nav">
+				<a href="http://scotch.io/bar-talk">
+					<span class="li_news"></span> 随便聊聊
+				</a>
+			</li>
+			<li id="tutorials-nav">
+				<a href="http://scotch.io/tutorials">
+					<span class="li_bulb"></span> Tutorials
+				</a>
+			</li>
+			<li>
+				<a href="http://scotch.io/series">
+					<span class="li_diamond"></span> Series
+				</a>
+			</li>
+			<li>
+				<a href="http://scotch.io/quick-tips">
+					<span class="li_star"></span> Quick Tips
+				</a>
+			</li>
+			<li>
+				<a href="http://scotch.io/work">
+					<span class="li_fire"></span> Projects
+				</a>
+			</li>
+			<li>
+				<a href="http://scotch.io/about">
+					<span class="li_user"></span> About
+				</a>
+			</li>
+			<li id="mobile-toggle">
+				<a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#" class="toggle-mobile"><i class="fa fa-bars"></i></a>
+			</li>
+		</ul>
+	</nav>
+
+	<nav id="top-nav" class="hidden-xs">
+		<div id="search-form">
+			<span class="li_search"></span>
+			<form action="http://scotch.io/" method="GET" name="search" role="search">
+				<input type="search" name="s">
+			</form>
+		</div>
+
+		<ul class="text-center">
+			<li id="header-google-plus" class="header-social sbg-google-plus">
+				<a class="social-cover sbg-google-plus" href="https://plus.google.com/b/113854128330570384219/+ScotchIo">
+					<span class="fa fa-google-plus"></span>
+				</a>
+					<div id="___follow_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 86px; height: 15px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 86px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1404382643554" name="I0_1404382643554" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/follow.html" data-gapiattached="true"></iframe></div>
+			</li>
+			<li id="header-twitter" class="header-social sbg-twitter">
+				<a class="social-cover sbg-twitter" href="https://twitter.com/scotch_io">
+					<span class="fa fa-twitter"></span>
+				</a>
+				<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/follow_button.1403226798.html" class="twitter-follow-button social-action twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 61px; height: 20px;"></iframe>
+			</li>
+			<li id="header-facebook" class="header-social sbg-facebook">
+				<a class="social-cover sbg-facebook" href="https://www.facebook.com/scotchdevelopment">
+					<span class="fa fa-facebook"></span>
+				</a>
+				<div class="fb-like social-action fb_iframe_widget" data-href="https://www.facebook.com/scotchdevelopment" data-width="50" data-layout="button" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=1389892087910588&amp;href=https%3A%2F%2Fwww.facebook.com%2Fscotchdevelopment&amp;layout=button&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false&amp;width=50"><span style="vertical-align: bottom; width: 50px; height: 20px;"><iframe name="f3f78a08e8" width="50px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/like(1).html" style="border: none; visibility: visible; width: 50px; height: 20px;" class=""></iframe></span></div>
+			</li>
+			<li>
+				<a class="sbg-email" href="http://eepurl.com/Ly0br"><span class="fa fa-envelope"></span></a>
+			</li>
+			<li>
+				<a class="sbg-rss" href="http://scotch.io/feed" target="_blank"><span class="fa fa-rss"></span></a>
+			</li>
+
+			<li><a id="search-button" href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#"><span class="li_search"></span></a></li>
+		</ul>
+	</nav>
+</div>
+
+
+<div id="site-wrapper">
+
+<div id="mobile-nav">
+
+
+	<ul>
+		<li><a href="http://scotch.io/bar-talk">Bar Talk</a></li>
+		<li><a href="http://scotch.io/tutorials">Tutorials</a></li>
+		<li><a href="http://scotch.io/quick-tips">Quick Tips</a></li>
+	</ul>
+	<form action="http://scotch.io/" method="GET" role="search" class="clearfix">
+		<input type="search" name="s">
+		<button type="submit"><span class="li_search"></span></button>
+	</form>
+	<ul>
+	<li class="social-mobile clearfix">
+		<a class="facebook" href="https://www.facebook.com/scotchdevelopment"><i class="fa fa-facebook"></i></a>
+		<a class="twitter" href="https://twitter.com/scotch_io"><i class="fa fa-twitter"></i></a>
+		<a class="google" href="https://plus.google.com/u/0/+ScotchIo/posts"><i class="fa fa-google-plus"></i></a>
+		<a class="rss" href="http://scotch.local/feed"><i class="fa fa-rss"></i></a>
+	</li></ul>
+</div>
+
+
+<div class="sub-menu" id="tutorials-sub-nav">
+	<div class="offset" style="-webkit-transform: translate3d(0px, 32275px, 0px) scale3d(1, 1, 1);">
+		<span class="li_bulb"></span>
+		<h3>Tutorials</h3>
+		<ul>
+			<li><a href="http://scotch.io/tag/css3">CSS</a></li>
+			<li class="menu-header">Javascript
+				<ul>
+					<li><a href="http://scotch.io/tag/angular-js">AngularJS</a></li>
+					<li><a href="http://scotch.io/tag/node-js">Node.js</a></li>
+					<li><a href="http://scotch.io/tag/mean">MEAN</a></li>
+				</ul>
+			</li>
+			<li class="menu-header">PHP
+				<ul>
+					<li><a href="http://scotch.io/tag/laravel">Laravel</a></li>
+				</ul>
+			</li>
+			<li><a href="http://scotch.io/category/tutorials/social">Social</a></li>
+			<li class="menu-header">Tools
+				<ul>
+					<li><a href="http://scotch.io/tag/editor">Editors</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<div id="main" class="clearfix">
+
+	<div id="content" class="col">
+
+
+
+
+	<article class="post-2566 post type-post status-publish format-standard has-post-thumbnail hentry category-javascript tag-api tag-expressjs tag-mean tag-mongodb-2 tag-node-js tag-rest article single tiles" id="post-2566">
+
+		<a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#reader-mode" class="toggle-reader-mode"><i class="fa fa-arrows-alt"></i></a>
+
+		<!-- FEATURED IMAGE -->
+					<img width="1200" height="500" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/restful-api-node-express-4-router.jpg" class="img-responsive wp-post-image" alt="restful-api-node-express-4-router" id="article-main-image">
+	 	<!-- CATEGORY -->
+	 	<div class="article-cat">
+			<a href="http://scotch.io/category/tutorials/javascript" title="View all posts in Javascript" rel="category tag">Javascript</a>		</div>
+
+	 	<!-- ARTICLE CONTENT -->
+	 	<div class="article-content">
+
+			<div class="article-white">
+
+			<h1>Build a RESTful API Using Node and Express 4</h1>
+			<div class="byline">
+				<span class="byline-item"><span class="li_user"></span> <a href="http://scotch.io/author/chris">Chris Sevilleja</a></span>
+				<span class="byline-item"><span class="li_calendar"></span> April 15, 2014</span>
+				<span class="byline-item"><span class="li_tag"></span> ·<a href="http://scotch.io/tag/api" rel="tag">API</a>, <a href="http://scotch.io/tag/expressjs" rel="tag">expressJS</a>, <a href="http://scotch.io/tag/mean" rel="tag">MEAN</a>, <a href="http://scotch.io/tag/mongodb-2" rel="tag">mongoDB</a>, <a href="http://scotch.io/tag/node-js" rel="tag">node.js</a>, <a href="http://scotch.io/tag/rest" rel="tag">REST</a></span>
+				<span class="byline-item">
+					<span class="li_bubble"></span>
+					<a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#disqus_thread" data-disqus-identifier="2566 http://scotch.io/?p=2566">69 Comments</a>
+				</span>
+			</div>
+
+
+			<div class="share-buttons clearfix">
+				<ul class="share-links list-inline">
+					<li class="share-facebook">
+	                    <a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#" onclick="
+	                        window.open(
+	                          &#39;https://www.facebook.com/sharer/sharer.php?u=&#39;+encodeURIComponent(location.href),
+	                          &#39;facebook-share-dialog&#39;,
+	                          &#39;width=626,height=436&#39;);
+	                        return false;">
+	                        <div class="social-number">183</div>
+	                        <span class="fa fa-facebook sbg-facebook" style="-webkit-transform: rotate(322750deg);"></span>
+	                      Share
+	                    </a>
+		            </li>
+					<li class="share-twitter">
+						<a href="https://twitter.com/intent/tweet?text=Build+a+RESTful+API+Using+Node+and+Express+4&url=http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4&via=scotch_io&related=scotch_io">
+							<div class="social-number">348</div>
+							<span class="fa fa-twitter sbg-twitter" style="-webkit-transform: rotate(322750deg);"></span>
+						Tweet</a>
+					</li>
+					<li class="share-googleplus">
+						<a href="https://plus.google.com/share?url=http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4" onclick="javascript:window.open(this.href,&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;">
+						<div class="social-number">170</div>
+							<span class="fa fa-google-plus sbg-google-plus" style="-webkit-transform: rotate(322750deg);"></span>
+						Plus</a>
+					</li>
+				</ul>
+			</div>
+
+						<div class="action-buttons">
+				<a class="btn btn-lg btn-warning" href="https://github.com/scotch-io/node-api" target="blank"><span class="fa fa-code"></span> View Code</a>			</div>
+
+			</div>
+
+			<div class="tile">
+<div class="tile-content">
+<p>With the release of <a href="http://expressjs.com/4x/api.html" target="_blank">Express 4.0</a> just a few days ago, lots of our Node apps will have some changes in how they handle routing. With the changes in the <a href="http://expressjs.com/4x/api.html#router" target="_blank">Express Router</a>, we have more flexibility in how we can define the routes for our applications.</p>
+<p>Today we’ll be looking at creating a RESTful API using Node, <a href="http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4">Express 4 and its Router</a>, and Mongoose to interact with a MongoDB instance. We will also be testing our API using <a href="https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop" target="_blank">Postman</a> in Chrome.</p>
+<p>Let’s look at the API we want to build and what it can do.</p>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="our-application"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#our-application"><span class="heading-link fa fa-link"></span> Our Application</a></h2>
+<p>We are going to build an API that will:</p>
+<ul>
+<li>Handle CRUD for an item (we’re going to use bears)</li>
+<li>Have a standard URL (<code>http://example.com/api/bears</code> and <code>http://example.com/api/bears/:bear_id</code>)</li>
+<li>Use the proper HTTP verbs to make it RESTful (<code>GET</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code>)</li>
+<li>Return JSON data</li>
+<li>Log all requests to the console</li>
+</ul>
+<p>All of this is pretty standard for <a href="http://scotch.io/bar-talk/designing-a-restful-web-api">RESTful APIs</a>. Feel free to switch out bears for anything that you will want to build for your application (users, superheroes, beers, etc).</p>
+<p>Make sure you have <a href="http://nodejs.org/" target="_blank">Node</a> installed and let’s get to it!</p>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="getting-started"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#getting-started"><span class="heading-link fa fa-link"></span> Getting Started</a></h2>
+<p>Let’s look at all the files we will need to create our API. We will need to <strong>define our Node packages</strong>, <strong>start our server using Express</strong>, <strong>define our model</strong>, <strong>declare our routes using Express</strong>, and last but not least, <strong>test our API</strong>.</p>
+<p>Here is our file structure. We won’t need many files and we’ll keep this very simple for demonstration purposes. When moving to a production or larger application, you’ll want to separate things out into a good structure (like having your routes in their own file).</p>
+<pre class="  language-javascript"><code class="  language-javascript">
+	<span class="token operator">-</span> app<span class="token operator">/</span>
+	<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">-</span> models<span class="token operator">/</span>
+	<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">--</span> bear<span class="token punctuation">.</span>js <span class="token comment" spellcheck="true">	// our bear model
+</span>	<span class="token operator">-</span> node_modules<span class="token operator">/</span>    <span class="token comment" spellcheck="true"> // created by npm. holds our dependencies/packages
+</span>	<span class="token operator">-</span> package<span class="token punctuation">.</span>json 	<span class="token comment" spellcheck="true">	// define all our node app and dependencies
+</span>	<span class="token operator">-</span> server<span class="token punctuation">.</span>js 	<span class="token comment" spellcheck="true">	// configure our application and create routes
+</span></code>
+</pre>
+<h3>Defining our Node Packages <small>package.json</small></h3>
+<p>As with all of our Node projects, we will define the packages we need in <code>package.json</code>. Go ahead and create that file with these packages.</p>
+<pre class="  language-javascript"><code class="  language-javascript"><span class="token comment" spellcheck="true">// package.json
+</span>
+<span class="token punctuation">{</span>
+	<span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"node-api"</span><span class="token punctuation">,</span>
+	<span class="token string">"main"</span><span class="token punctuation">:</span> <span class="token string">"server.js"</span><span class="token punctuation">,</span>
+	<span class="token string">"dependencies"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		<span class="token string">"express"</span><span class="token punctuation">:</span> <span class="token string">"~4.0.0"</span><span class="token punctuation">,</span>
+		<span class="token string">"mongoose"</span><span class="token punctuation">:</span> <span class="token string">"~3.6.13"</span><span class="token punctuation">,</span>
+		<span class="token string">"body-parser"</span><span class="token punctuation">:</span> <span class="token string">"~1.0.1"</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code>
+</pre>
+<p><span class="text-info">What do these packages do?</span> <code>express</code> is the Node framework. <code>mongoose</code> is the ORM we will use to communicate with our MongoDB database. <code>body-parser</code> will let us pull POST content from our HTTP request so that we can do things like create a bear.</p>
+<h3>Installing Our Node Packages</h3>
+<p>This might be the easiest step. Go into the command line in the root of your application and type:</p>
+<pre class="  language-javascript"><code class="  language-javascript">
+$ npm install
+</code>
+</pre>
+<p>npm will now pull in all the packages defined into a <code>node_modules</code> folder in our project.</p>
+<p><code>npm</code> is Node’s package manager that will bring in all the packages we defined in <code>package.json</code>. Simple and easy. Now that we have our packages, let’s go ahead and use them when we set up our API.</p>
+<p>We’ll be looking to our <code>server.js</code> file to setup our app since that’s the <code>main</code> file we declared in <code>package.json</code>.</p>
+<h3>Setting Up Our Server <small>server.js</small></h3>
+<p>Node will look here when starting the application so that it will know how we want to configure our application and API.</p>
+<p>We will start with the bear (get it?) essentials necessary to start up our application. We’ll keep this code clean and commented well so we understand exactly what’s going on every step of the way.</p>
+<pre class="line-numbers  language-javascript"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span><span class="token comment" spellcheck="true">
+// BASE SETUP
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span><span class="token comment" spellcheck="true">
+// call the packages we need
+</span><span class="token keyword">var</span> express    <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	<span class="token comment" spellcheck="true">	// call express
+</span><span class="token keyword">var</span> app        <span class="token operator">=</span> <span class="token function">express<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> 			<span class="token comment" spellcheck="true">	// define our app using express
+</span><span class="token keyword">var</span> bodyParser <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'body-parser'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// configure app to use bodyParser()
+</span><span class="token comment" spellcheck="true">// this will let us get the data from a POST
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token function">bodyParser<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> port <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>PORT <span class="token operator">||</span> <span class="token number">8080</span><span class="token punctuation">;</span> 	<span class="token comment" spellcheck="true">	// set our port
+</span><span class="token comment" spellcheck="true">
+// ROUTES FOR OUR API
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span><span class="token keyword">var</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> 			<span class="token comment" spellcheck="true">	// get an instance of the express Router
+</span><span class="token comment" spellcheck="true">
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+</span>router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'hooray! welcome to our api!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// more routes for our API will happen here
+</span><span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// START THE SERVER
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>app<span class="token punctuation">.</span><span class="token function">listen<span class="token punctuation">(</span></span>port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'Magic happens on port '</span> <span class="token operator">+</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+</pre>
+<p>Wow we did a lot there! It’s all very simple though so let’s walk through it a bit.</p>
+<p><strong class="text-info">Base Setup</strong> In our base setup, we pull in all the packages we pulled in using npm. We’ll grab express, define our app, get bodyParser and configure our app to use it. We can also set the port for our application.</p>
+<p><strong class="text-info">Routes for Our API</strong> This section will hold all of our routes. The structure for using the Express Router let’s us pull in an instance of the router. We can then <strong>define routes</strong> and then <strong>apply those routes</strong> to a root URL (in this case, API).</p>
+<p><strong class="text-info">Start our Server</strong> We’ll have our express app listen to the port we defined earlier. Then our application will be live and we can test it!</p>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="starting-our-server-and-testing"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#starting-our-server-and-testing"><span class="heading-link fa fa-link"></span> Starting Our Server and Testing</a></h2>
+<p>Let’s make sure that everything is working up to this point. We will start our Node app and then send a request to the one route we defined to make sure we get a response.</p>
+<p>Let’s start our server. From the command line, type:</p>
+<pre class="  language-javascript"><code class="  language-javascript">
+$ node server<span class="token punctuation">.</span>js
+</code>
+</pre>
+<p>You should see your Node app start up and Express will create a server.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-start-server.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-start-server.png" alt="node-api-start-server" width="944" height="459" class="alignnone size-full wp-image-2581 img-responsive img-thumbnail"></a>
+</div>
+<p>Now that we know our application is up and running, let’s test it.</p>
+<h3>Testing Our API Using Postman</h3>
+<p>Postman will help us test our API. It will basically send HTTP requests to a URL of our choosing. We can even pass in parameters (which we will soon) and authentication (which we won’t need for this tutorial).</p>
+<p>Open up Postman and let’s walk through how to use it.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/postman-rest-client-node-api.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/postman-rest-client-node-api.png" alt="postman-rest-client-node-api" width="999" height="825" class="alignnone size-full wp-image-2582 img-responsive img-thumbnail"></a>
+</div>
+<p>All you have to do is <strong>enter your request URL</strong>, <strong>select an HTTP verb</strong>, and click <strong class="text-info">Send</strong>. Simple enough right?</p>
+<p>Here’s the moment we’ve been waiting for. Does our application work the way we configured it? Enter <code>http://localhost:8080/api</code> into the URL. <code>GET</code> is what we want since we just want to get data. Now click <strong>Send</strong>.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-test.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-test.png" alt="node-api-postman-test" width="1000" height="825" class="alignnone size-full wp-image-2592 img-responsive img-thumbnail"></a>
+</div>
+<p>Sweet! We got back exactly what we wanted. Now we know we can serve information to requests. Let’s wire up our database so we can start performing CRUD operations on some bears.</p>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="database-and-bear-model"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#database-and-bear-model"><span class="heading-link fa fa-link"></span> Database and Bear Model</a></h2>
+<p>We’ll keep this short and sweet so that we can get to the fun part of building the API routes. All we need to do is create a MongoDB database and have our application connect to it. We will also need to create a bear mongoose model so we can use mongoose to interact with our database.</p>
+<h3>Creating Our Database and Connecting</h3>
+<p>We will be using a database provided by <a href="http://modulus.io/" target="_blank">Modulus</a>. You can definitely create your own database and use it locally or use the awesome <a href="https://mongolab.com/" target="_blank">Mongolab</a>. All you really need is a URI like below so that your application can connect.</p>
+<p>Once you have your database created and have the URI to connect to, let’s add it to our application. In <code>server.js</code> in the Base Setup section, let’s add these two lines.</p>
+<pre class="line-numbers  language-javascript"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span><span class="token comment" spellcheck="true">
+// BASE SETUP
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">var</span> mongoose   <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+mongoose<span class="token punctuation">.</span><span class="token function">connect<span class="token punctuation">(</span></span><span class="token string">'mongodb://node:node@novus.modulusmongo.net:27017/Iganiq8o'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"> // connect to our database
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+</pre>
+<p>That will grab the mongoose package and connect to our remote database hosted by Modulus. Now that we are connected to our database, let’s create a mongoose model to handle our bears.</p>
+<h3>Bear Model <small>app/models/bear.js</small></h3>
+<p>Since the model won’t be the focus of this tutorial, we’ll just create a model and provide our bears with a name field. That’s it. Let’s create that file and define the model.</p>
+<pre class="line-numbers  language-javascript"><code class="  language-javascript"><span class="token comment" spellcheck="true">// app/models/bear.js
+</span>
+<span class="token keyword">var</span> mongoose     <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'mongoose'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> Schema       <span class="token operator">=</span> mongoose<span class="token punctuation">.</span>Schema<span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> BearSchema   <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Schema</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+	name<span class="token punctuation">:</span> String
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> mongoose<span class="token punctuation">.</span><span class="token function">model<span class="token punctuation">(</span></span><span class="token string">'Bear'</span><span class="token punctuation">,</span> BearSchema<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+</pre>
+<p>With that file created, let’s pull it into our <code>server.js</code> so that we can use it within our application. We’ll add one more line to that file.</p>
+<pre class="line-numbers  language-javascript"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span><span class="token comment" spellcheck="true">
+// BASE SETUP
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+<span class="token keyword">var</span> Bear     <span class="token operator">=</span> <span class="token function">require<span class="token punctuation">(</span></span><span class="token string">'./app/models/bear'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+</pre>
+<p>Now our entire application is ready and wired up so we can start building out our routes. These routes will define our API and the main reason why this tutorial exists. Moving on!</p>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="express-router-and-routes"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#express-router-and-routes"><span class="heading-link fa fa-link"></span> Express Router and Routes</a></h2>
+<p>We will use an instance of the Express Router to handle all of our routes. Here is an overview of the routes we will require, what they will do, and the HTTP Verb used to access it.</p>
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<td>Route</td>
+<td>HTTP Verb</td>
+<td>Description</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/api/bears</td>
+<td><code>GET</code></td>
+<td>Get all the bears.</td>
+</tr>
+<tr>
+<td>/api/bears</td>
+<td><code>POST</code></td>
+<td>Create a bear.</td>
+</tr>
+<tr>
+<td>/api/bears/:bear_id</td>
+<td><code>GET</code></td>
+<td>Get a single bear.</td>
+</tr>
+<tr>
+<td>/api/bears/:bear_id</td>
+<td><code>PUT</code></td>
+<td>Update a bear with new info.</td>
+</tr>
+<tr>
+<td>/api/bears/:bear_id</td>
+<td><code>DELETE</code></td>
+<td>Delete a bear.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This will cover the basic routes needed for an API. This also keeps to a good format where we have kept the actions we need to execute (GET, POST, PUT, and DELETE) as HTTP verbs.</p>
+<h2 id="route-middleware"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#route-middleware"><span class="heading-link fa fa-link"></span> Route Middleware</a></h2>
+<p>We’ve already defined our first route and seen it in action. The Express Router gives us a great deal of flexibility in definining our routes.</p>
+<p>Let’s say that we <strong>wanted something to happen every time a request was sent to our API</strong>. For this example we are just going to <code>console.log()</code> a message. Let’s add that middleware now.</p>
+<pre class="line-numbers  language-javascript" data-line="9-14"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// ROUTES FOR OUR API
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span><span class="token keyword">var</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span> 			<span class="token comment" spellcheck="true">	// get an instance of the express Router
+</span><span class="token comment" spellcheck="true">
+// middleware to use for all requests
+</span>router<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment" spellcheck="true">	// do logging
+</span>	console<span class="token punctuation">.</span><span class="token function">log<span class="token punctuation">(</span></span><span class="token string">'Something is happening.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">next<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true"> // make sure we go to the next routes and don't stop here
+</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+</span>router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'hooray! welcome to our api!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// more routes for our API will happen here
+</span><span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 160px;">
+
+
+
+
+
+</div></pre>
+<p>All we needed to do to declare that middleware was to use <code>router.use(function())</code>. The order of how we define the parts of our router is very important. They will run in the order that they are listed and thanks to the <a href="http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0">changes in Express 4.0</a>, we won’t have problems doing this like in Express 3.0. Everything will run in the correct order.</p>
+<p>We are sending back information as <strong>JSON data</strong>. This is standard for an API and will help the people using our API to use our data.</p>
+<p>We will also add <code>next()</code> to indicate to our application that it should continue to the other routes. This is important because our application would stop at this middleware without it.</p>
+<p><strong>Middleware Uses</strong> Using middleware like this can be very powerful. We can do validations to make sure that everything coming from a request is safe and sound. We can throw errors here in case something is wrong. We can do some extra logging for analytics or any statistics we’d like to keep. There are many possibilities here. Go wild.</p>
+<h4>Testing Our Middleware</h4>
+<p>Now when we send a request to our application using Postman, <code>Something is happening</code> will be logged to our Node console (the command line).</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-route-middleware-express.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-route-middleware-express.png" alt="node-api-route-middleware-express" width="1002" height="544" class="alignnone size-full wp-image-2588 img-responsive img-thumbnail"></a>
+</div>
+<p>With middleware, we can do awesome things to requests coming into our API. We will probably want to make sure that the user is authenticated to access our API. We’ll go over that in a future article, but for now let’s just log something to the console with our middleware.</p>
+<h2 id="creating-the-basic-routes"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#creating-the-basic-routes"><span class="heading-link fa fa-link"></span> Creating the Basic Routes</a></h2>
+<p>We will now create the routes to handle <strong>getting all the bears</strong> and <strong>creating a bear</strong>. This will both be handled using the <code>/api/bears</code> route. We’ll look at creating a bear first so that we have bears to work with.</p>
+<h3>Creating a Bear <small>POST /api/bears</small></h3>
+<p>We will add the new route to handle POST and then test it using Postman.</p>
+<pre class="line-numbers  language-javascript" data-line="14-30"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// ROUTES FOR OUR API
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token comment" spellcheck="true"> // &lt;-- route middleware and first route are here
+</span><span class="token comment" spellcheck="true">
+// more routes for our API will happen here
+</span><span class="token comment" spellcheck="true">
+// on routes that end in /bears
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// create a bear (accessed at POST http://localhost:8080/api/bears)
+</span>	<span class="token punctuation">.</span><span class="token function">post<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token keyword">var</span> bear <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Bear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 	<span class="token comment" spellcheck="true">	// create a new instance of the Bear model
+</span>		bear<span class="token punctuation">.</span>name <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"> // set the bears name (comes from the request)
+</span>
+	<span class="token comment" spellcheck="true">	// save the bear and check for errors
+</span>		bear<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'Bear created!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 260px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></pre>
+<p>Now we have created the <code>POST</code> route for our application. We will use Express’s <code>router.route()</code> to handle multiple routes for the same URI. We are able to handle all the requests that end in <code>/bears</code>.</p>
+<p>Let’s look at Postman now to create our bear.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-post-create-bear.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-post-create-bear.png" alt="node-api-postman-post-create-bear" width="998" height="825" class="alignnone size-full wp-image-2591 img-responsive img-thumbnail"></a>
+</div>
+<p>Notice that we are sending the <code>name</code> data as <code>x-www-form-urlencoded</code>. This will send all of our data to the Node server as query strings.</p>
+<p>We get back a successful message that our bear has been created. Let’s handle the API route to get all the bears so that we can see the bear that just came into existence.</p>
+<h3>Getting All Bears <small>GET /api/bears</small></h3>
+<p>This will be a simple route that we will add onto the <code>router.route()</code> we created for the POST. With router.route(), we are able to chain together the different routes. This keeps our application clean and organized.</p>
+<pre class="line-numbers  language-javascript" data-line="24-31"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// ROUTES FOR OUR API
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token comment" spellcheck="true"> // &lt;-- route middleware and first route are here
+</span><span class="token comment" spellcheck="true">
+// more routes for our API will happen here
+</span><span class="token comment" spellcheck="true">
+// on routes that end in /bears
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// create a bear (accessed at POST http://localhost:8080/api/bears)
+</span>	<span class="token punctuation">.</span><span class="token function">post<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+		<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// get all the bears (accessed at GET http://localhost:8080/api/bears)
+</span>	<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Bear<span class="token punctuation">.</span><span class="token function">find<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> bears<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span>bears<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 460px;">
+
+
+
+
+
+
+
+</div></pre>
+<p>Straightforward route. Just send a <code>GET</code> request to <code>http://localhost:8080/api/bears</code> and we’ll get all the bears back in JSON format.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-all.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-all.png" alt="node-api-postman-get-all" width="1001" height="825" class="alignnone size-full wp-image-2596 img-responsive img-thumbnail"></a>
+</div>
+<h2 id="creating-routes-for-a-single-item"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#creating-routes-for-a-single-item"><span class="heading-link fa fa-link"></span> Creating Routes for A Single Item</a></h2>
+<p>We’ve handled the group for routes ending in <code>/bears</code>. Let’s now handle the routes for when we pass in a parameter like a bear’s id.</p>
+<p>The things we’ll want to do for this route, which will end in <code>/bears/:bear_id</code> will be:</p>
+<ul>
+<li>Get a single bear.</li>
+<li>Update a bear’s info.</li>
+<li>Delete a bear.</li>
+</ul>
+<p>The <code>:bear_id</code> from the request will be accessed thanks to that <code>body-parser</code> package we called earlier.</p>
+<h3>Getting a Single Bear <small>GET /api/bears/:bear_id</small></h3>
+<p>We’ll add another <code>router.route()</code> to handle all requests that have a <code>:bear_id</code> attached to them.</p>
+<pre class="line-numbers  language-javascript" data-line="20-26"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// ROUTES FOR OUR API
+</span><span class="token comment" spellcheck="true">// =============================================================================
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears/:bear_id
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears/:bear_id'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Bear<span class="token punctuation">.</span><span class="token function">findById<span class="token punctuation">(</span></span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>bear_id<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> bear<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span>bear<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 380px;">
+
+
+
+
+
+
+</div></pre>
+<p>From our call to get all the bears, we can see the long id of one of our bears. Let’s grab that id and test getting that single bear in Postman.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-single.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-single.png" alt="node-api-postman-get-single" width="999" height="824" class="alignnone size-full wp-image-2597 img-responsive img-thumbnail"></a>
+</div>
+<p>We can grab one bear from our API now! Let’s look at updating that bear’s name. Let’s say he wants to be more sophisiticated so we’ll rename him from Klaus to <strong>Sir Klaus</strong>.</p>
+<h3>Updating a Bear’s Info <small>PUT /api/bears/:bear_id</small></h3>
+<p>Let’s chain a route onto our this router.route() and add a <code>.put()</code>.</p>
+<pre class="line-numbers  language-javascript" data-line="19-39"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears/:bear_id
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears/:bear_id'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token function">put<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	<span class="token comment" spellcheck="true">	// use our bear model to find the bear we want
+</span>		Bear<span class="token punctuation">.</span><span class="token function">findById<span class="token punctuation">(</span></span>req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>bear_id<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> bear<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			bear<span class="token punctuation">.</span>name <span class="token operator">=</span> req<span class="token punctuation">.</span>body<span class="token punctuation">.</span>name<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">	// update the bears info
+</span>
+		<span class="token comment" spellcheck="true">	// save the bear
+</span>			bear<span class="token punctuation">.</span><span class="token function">save<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+					res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+				res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'Bear updated!'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 360px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></pre>
+<p>We will use the given <code>id</code> from the PUT request, grab that bear, make changes, and save him back to the database.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-post-man-update-record.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-post-man-update-record.png" alt="node-api-post-man-update-record" width="997" height="824" class="alignnone size-full wp-image-2598 img-responsive img-thumbnail"></a>
+</div>
+<p>We can also use the <code>GET /api/bears</code> call we used earlier to see that his name has changed.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-all-updated.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-all-updated.png" alt="node-api-postman-all-updated" width="996" height="823" class="alignnone size-full wp-image-2599 img-responsive img-thumbnail"></a>
+</div>
+<h3>Deleting a Bear <small>DELETE /api/bears/:bear_id</small></h3>
+<p>When someone requests that a bear is deleted, all they have to do is send a DELETE to <code>/api/bears/:bear_id</code></p>
+<p>Let’s add the code for deleting bears.</p>
+<pre class="line-numbers  language-javascript" data-line="24-34"><code class="  language-javascript"><span class="token comment" spellcheck="true">// server.js
+</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears'</span><span class="token punctuation">)</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment" spellcheck="true">
+// on routes that end in /bears/:bear_id
+</span><span class="token comment" spellcheck="true">// ----------------------------------------------------
+</span>router<span class="token punctuation">.</span><span class="token function">route<span class="token punctuation">(</span></span><span class="token string">'/bears/:bear_id'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token function">put<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">	// delete the bear with this id (accessed at DELETE http://localhost:8080/api/bears/:bear_id)
+</span>	<span class="token punctuation">.</span><span class="token function">delete<span class="token punctuation">(</span></span><span class="token keyword">function</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		Bear<span class="token punctuation">.</span><span class="token function">remove<span class="token punctuation">(</span></span><span class="token punctuation">{</span>
+			_id<span class="token punctuation">:</span> req<span class="token punctuation">.</span>params<span class="token punctuation">.</span>bear_id
+		<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>err<span class="token punctuation">,</span> bear<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+				res<span class="token punctuation">.</span><span class="token function">send<span class="token punctuation">(</span></span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+			res<span class="token punctuation">.</span><span class="token function">json<span class="token punctuation">(</span></span><span class="token punctuation">{</span> message<span class="token punctuation">:</span> <span class="token string">'Successfully deleted'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">
+// REGISTER OUR ROUTES -------------------------------
+</span><span class="token comment" spellcheck="true">// all of our routes will be prefixed with /api
+</span>app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token string">'/api'</span><span class="token punctuation">,</span> router<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code>
+<div class=" line-highlight" style="top: 460px;">
+
+
+
+
+
+
+
+
+
+
+</div></pre>
+<p>Now when we send a request to our API using <code>DELETE</code> with the proper <code>bear_id</code>, we’ll delete our bear from existence.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-delete.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-delete.png" alt="node-api-postman-delete" width="997" height="822" class="alignnone size-full wp-image-2600 img-responsive img-thumbnail"></a>
+</div>
+<p>When we try to get all the bears, there will be nothing left of them.</p>
+<div class="text-center">
+<a href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-all-nothing.png"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-api-postman-get-all-nothing.png" alt="node-api-postman-get-all-nothing" width="997" height="822" class="alignnone size-full wp-image-2601 img-responsive img-thumbnail"></a>
+</div>
+</div>
+</div>
+<div class="tile">
+<div class="tile-content">
+<h2 id="conclusion"><a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#conclusion"><span class="heading-link fa fa-link"></span> Conclusion</a></h2>
+<p>We now have the means to handle CRUD on a specific resource (our beloved bears) through our own API. Using the techniques above should be a good foundation to move into building larger and more robust APIs.</p>
+<p>This has been a quick look at creating a Node API using Express 4. There are many more things you can do with your own APIs. You can add authentication, create better error messages, add different sections so you’re not just working with bears.</p>
+<p>Sound off in the comments if you have any questions or would like to see any specific topics in the future.</p>
+</div>
+</div>
+
+			<div class="article-white">
+
+			<div class="action-buttons">
+				<a class="btn btn-lg btn-warning" href="https://github.com/scotch-io/node-api" target="_blank"><span class="fa fa-code"></span> View Code</a>			</div>
+
+			<div class="share-buttons clearfix">
+				<ul class="share-links list-inline">
+					<li class="share-facebook">
+	                    <a href="http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4#" onclick="
+	                        window.open(
+	                          &#39;https://www.facebook.com/sharer/sharer.php?u=&#39;+encodeURIComponent(location.href),
+	                          &#39;facebook-share-dialog&#39;,
+	                          &#39;width=626,height=436&#39;);
+	                        return false;">
+	                        <div class="social-number">183</div>
+	                        <span class="fa fa-facebook sbg-facebook" style="-webkit-transform: rotate(322750deg);"></span>
+	                      Share
+	                    </a>
+		            </li>
+					<li class="share-twitter">
+						<a href="https://twitter.com/intent/tweet?text=Build+a+RESTful+API+Using+Node+and+Express+4&url=http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4&via=scotch_io&related=scotch_io">
+							<div class="social-number">348</div>
+							<span class="fa fa-twitter sbg-twitter" style="-webkit-transform: rotate(322750deg);"></span>
+						Tweet</a>
+					</li>
+					<li class="share-googleplus">
+						<a href="https://plus.google.com/share?url=http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4" onclick="javascript:window.open(this.href,&#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600&#39;);return false;">
+						<div class="social-number">170</div>
+							<span class="fa fa-google-plus sbg-google-plus" style="-webkit-transform: rotate(322750deg);"></span>
+						Plus</a>
+					</li>
+				</ul>
+			</div>
+
+			</div>
+
+		</div>
+	</article>
+
+	<div id="article-secondary">
+		<div id="related-articles" class="text-center">
+			<div class="yarpp-related">
+
+<h3>Related Articles</h3>
+
+<div class="row">
+
+
+	<div class="col-sm-4">
+					<a href="http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/using-the-express-4-router-600x250.jpg" class="img-responsive img-thumbnail wp-post-image" alt="using-the-express-4-router"></a>
+
+		<p><a href="http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4">Learn to Use the New Router in ExpressJS 4.0</a></p>
+	</div>
+
+
+	<div class="col-sm-4">
+					<a href="http://scotch.io/tutorials/javascript/upgrading-our-easy-node-authentication-series-to-expressjs-4-0"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/upgrading-node-authentication-to-express-4-600x250.jpg" class="img-responsive img-thumbnail wp-post-image" alt="upgrading-node-authentication-to-express-4"></a>
+
+		<p><a href="http://scotch.io/tutorials/javascript/upgrading-our-easy-node-authentication-series-to-expressjs-4-0">Upgrading Our “Easy Node Authentication” Series to ExpressJS 4.0</a></p>
+	</div>
+
+
+	<div class="col-sm-4">
+					<a href="http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-express-upgrading-3-4-600x250.jpg" class="img-responsive img-thumbnail wp-post-image" alt="node-express-upgrading-3-4"></a>
+
+		<p><a href="http://scotch.io/bar-talk/expressjs-4-0-new-features-and-upgrading-from-3-0">ExpressJS 4.0: New Features and Upgrading from 3.0</a></p>
+	</div>
+
+
+	<div class="col-sm-4">
+					<a href="http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-application-organization-and-structure"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-angular-todo-application-structure-600x250.jpg" class="img-responsive img-thumbnail wp-post-image" alt="node-angular-todo-application-structure"></a>
+
+		<p><a href="http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-application-organization-and-structure">Node and Angular To-Do App: Application Organization and Structure</a></p>
+	</div>
+
+
+	<div class="col-sm-4">
+					<a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-angular-todo-600x250.jpg" class="img-responsive img-thumbnail wp-post-image" alt="node-angular-todo"></a>
+
+		<p><a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">Creating a Single Page Todo App with Node and Angular</a></p>
+	</div>
+
+
+	<div class="col-sm-4">
+
+		<p><a href="http://scotch.io/quick-tips/js/node/route-middleware-to-check-if-a-user-is-authenticated-in-node-js">Route Middleware to Check if a User is Authenticated in Node.js</a></p>
+	</div>
+
+	    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'scotchwebdevelopment';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+
+</div>
+</div>
+	 	</div>
+
+		<div id="author-info">
+			<div class="row">
+				<div class="col-sm-4">
+					<img alt="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/8a8bf3a2c952984defbd6bb48304b38e" class="avatar img-responsive img-thumbnail avatar-175 photo" height="175" width="175">				</div>
+				<div class="col-sm-8">
+					<h3><a href="http://scotch.io/author/chris">Chris Sevilleja</a></h3>
+					<p>Design, development, and anything in between that I find interesting.</p>
+
+					<a id="view-contributions" class="btn btn-info btn-sm" href="http://scotch.io/author/chris">
+						<span class="fa fa-heart"></span> View My Contributions
+					</a>
+
+					<ul id="author-links" class="list-unstyled text-center">
+						<li id="twitter-link">
+							<a class="sbg-twitter" href="http://twitter.com/sevilayha">
+								<span class="fa fa-twitter"></span>
+							</a>
+						</li>
+						<li id="google-link">
+							<a class="sbg-google-plus" rel="author" href="https://plus.google.com/u/0/111211028394313645953">
+								<span class="fa fa-google-plus"></span>
+							</a>
+					</li></ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="stay-connected" class="text-center">
+			<h3>Stay Connected With Us <br><small>hover these for magic</small></h3>
+
+			<div id="connected-rss" class="connected-container">
+				<a class="share-rss sbg-rss" href="http://scotch.io/feed">
+					<div class="connected-cover sbg-rss"><span class="fa fa-rss"></span> Subscribe</div>
+				</a>
+			</div>
+			<div id="connected-twitter" class="connected-container">
+				<a class="sbg-twitter" href="http://twitter.com/scotch_io">
+					<div class="connected-cover sbg-twitter"><span class="fa fa-twitter"></span> Follow</div>
+					</a><div class="connected-action sbg-twitter"><a class="sbg-twitter" href="http://twitter.com/scotch_io">
+					</a><iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/follow_button.1403226798(1).html" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 79px; height: 28px;"></iframe>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					</div>
+
+			</div>
+			<div id="connected-facebook" class="connected-container">
+				<a class="sbg-facebook" href="http://www.facebook.com/scotchdevelopment">
+					<div class="connected-cover sbg-facebook"><span class="fa fa-facebook"></span> Like</div>
+					<div class="connected-action sbg-facebook">
+						<div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/scotchdevelopment" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=1389892087910588&amp;href=https%3A%2F%2Fwww.facebook.com%2Fscotchdevelopment&amp;layout=box_count&amp;locale=en_US&amp;sdk=joey&amp;share=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 49px; height: 61px;"><iframe name="f3eac33e2c" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/like.html" style="border: none; visibility: visible; width: 49px; height: 61px;" class=""></iframe></span></div>
+					</div>
+				</a>
+			</div>
+			<div id="connected-google-plus" class="connected-container">
+				<a class="sbg-google-plus" href="http://plus.google.com/b/113854128330570384219/+ScotchIo/posts">
+					<div class="connected-cover sbg-google-plus"><span class="fa fa-google-plus"></span> +1</div>
+					<div class="connected-action sbg-google-plus">
+						<div id="___follow_1" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 94px; height: 64px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 94px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 64px;" tabindex="0" vspace="0" width="100%" id="I1_1404382643558" name="I1_1404382643558" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/follow(1).html" data-gapiattached="true"></iframe></div>
+					</div>
+				</a>
+			</div>
+
+				<div class="row">
+					<h4><span class="li_mail"></span></h4>
+					<p>Get valuable tips, articles, and resources straight to your inbox. Every Tuesday.</p>
+					<div class="col-sm-6 col-sm-offset-3">
+					<!-- Begin MailChimp Signup Form -->
+					<div id="mc_embed_signup">
+					<form action="http://scotch.us3.list-manage.com/subscribe/post?u=1c412c864c03eadaf07ccd61e&id=a818d504d4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
+					<div class="mc-field-group form-group">
+						<input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Your Secret Electronic Address">
+					</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c412c864c03eadaf07ccd61e_a818d504d4" value=""></div>
+						<div class="clear text-center"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-warning btn-sm"></div>
+					</form>
+					</div>
+					<!--End mc_embed_signup-->
+					</div>
+				</div>
+
+		</div>
+
+		<div class="article-ads text-center clearfix">
+			<ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-4625466825098355" data-ad-slot="9677859429" data-ad-format="auto" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:906px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:906px;background-color:transparent"><iframe width="906" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+
+		<!-- COMMENTS -->
+		<div id="comment-section" class="white-content">
+
+<div id="disqus_thread"><iframe id="dsq-2" data-disqus-uid="2" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" width="100%" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/saved_resource.html" scrolling="no" horizontalscrolling="no" verticalscrolling="no" style="width: 100% !important; border: none !important; overflow: hidden !important; height: 8096px !important;"></iframe><iframe id="dsq-indicator-north" data-disqus-uid="indicator-north" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" scrolling="no" style="width: 886px !important; border: none !important; overflow: hidden !important; top: 0px !important; min-width: 886px !important; max-width: 886px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe><iframe id="dsq-indicator-south" data-disqus-uid="indicator-south" allowtransparency="true" frameborder="0" tabindex="0" title="Disqus" scrolling="no" style="width: 886px !important; border: none !important; overflow: hidden !important; bottom: 0px !important; min-width: 886px !important; max-width: 886px !important; position: fixed !important; z-index: 2147483646 !important; height: 29px !important; min-height: 29px !important; max-height: 29px !important; display: none !important;"></iframe></div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://scotch.io/tutorials/javascript/build-a-restful-api-using-node-and-express-4';
+    var disqus_identifier = '2566 http://scotch.io/?p=2566';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'scotchwebdevelopment';
+    var disqus_title = "Build a RESTful API Using Node and Express 4";
+    var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /* Add the ability to add javascript callbacks */
+
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=2566';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+            {
+                'author_name':    "Decaying Code | Community Update 2014-04-16 – #angularjs, #stringjs, #nodejs, #KendoUI going #OSS, #aspnet and more",
+                'author_url':    "http:\/\/blog.decayingcode.com\/post\/Community-Update-2014-04-16-angularjs-stringjs-nodejs-KendoUI-going-OSS-aspnet-and-more",
+                'date':            "04\/16\/2014 01:38 PM",
+                'excerpt':        "[&#8230;] Build a RESTful API Using Node and Express 4 ♥ Scotch (scotch.io) [&#8230;] ",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "Noticias 28-04-2014 - La Web de Programación",
+                'author_url':    "http:\/\/kartones.net\/blogs\/lawebdeprogramacion\/archive\/2014\/04\/28\/noticias-28-04-2014.aspx",
+                'date':            "04\/27\/2014 03:56 PM",
+                'excerpt':        "[&#8230;] Google desarrolla un algoritmo capaz de resolver el 99,8% de sus captchas: Más que muchos seres humanos, porque como &hellip;",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "Updates &amp; Top Posts Related to Our Work @ Deconstructed | Deconstructed",
+                'author_url':    "http:\/\/blog.deconstructed.io\/updates-top-posts-related-to-our-work-deconstructed\/",
+                'date':            "04\/29\/2014 05:25 PM",
+                'excerpt':        "[&#8230;] Build a RESTful API Using Node and Express 4 [&#8230;] ",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "Amazon EC2 + MEAN | Juan Antonio Medina Iglesias",
+                'author_url':    "http:\/\/www.juan-medina.com\/?p=16730",
+                'date':            "05\/11\/2014 03:16 AM",
+                'excerpt':        "[&#8230;] hacer la parte de de servicios RESTfull usé esta guía aunque cambiando [&#8230;] ",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "Development | Pearltrees",
+                'author_url':    "http:\/\/www.pearltrees.com\/grantmichaels\/development\/id11297229\/item111018834",
+                'date':            "05\/14\/2014 04:40 PM",
+                'excerpt':        "[&#8230;] Build a RESTful API Using Node and Express 4 [&#8230;] ",
+                'type':            "pingback"            }
+,            {
+                'author_name':    "Javascript | Pearltrees",
+                'author_url':    "http:\/\/www.pearltrees.com\/serraventura\/javascript\/id10852570\/item117831734",
+                'date':            "06\/26\/2014 07:27 AM",
+                'excerpt':        "[&#8230;] of similarities to the Ruby framework, Sinatra. This makes it a great tool for building REST APIs. Build a &hellip;",
+                'type':            "pingback"            }
+        ],
+        'trackback_url': "http:\/\/scotch.io\/tutorials\/javascript\/build-a-restful-api-using-node-and-express-4\/trackback"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.77';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+		</div>
+
+		<div class="article-ads text-center clearfix">
+			<ins class="adsbygoogle" style="display: block; height: 90px;" data-ad-client="ca-pub-4625466825098355" data-ad-slot="6445191424" data-ad-format="auto" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:906px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:906px;background-color:transparent"><iframe width="906" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
+	</div>
+
+	<div id="article-end">
+		<div class="page-header">
+			<h5>Popular Series</h5>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<a href="http://scotch.io/series/the-complete-visual-guide-to-sublime-text-3">
+					<img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/guide2.jpg" class="img-responsive">
+				</a>
+				<h4><a href="http://scotch.io/series/the-complete-visual-guide-to-sublime-text-3">
+					The Complete Visual Guide to Sublime Text 3
+				</a></h4>
+			</div>
+			<div class="col-sm-4">
+				<a href="http://scotch.io/series/easy-node-authentication">
+					<img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-authentication1.jpg" class="img-responsive">
+				</a>
+				<h4><a href="http://scotch.io/series/easy-node-authentication">
+					Easy Node Authentication
+				</a></h4>
+			</div>
+			<div class="col-sm-4">
+				<a href="http://scotch.io/series/simple-laravel">
+					<img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/simple-and-easy-laravel.jpg" class="img-responsive">
+				</a>
+				<h4><a href="http://scotch.io/series/simple-laravel">
+					Simple and Easy Laravel
+				</a></h4>
+			</div>
+		</div>
+	</div>
+
+<!-- FOR JS ANIMALS -->
+<script>
+	console.log("%cBuild a RESTful API Using Node and Express 4", "color: #EFEFEF; font-size: large; text-transform: uppercase; background: #222; padding: 2px 50px; border-radius: 3px;");
+					console.image('http://scotch.io/wp-content/uploads/2014/04/restful-api-node-express-4-router-600x250.jpg');
+		console.log('Chris Sevilleja');
+	console.log('April 15, 2014');
+</script>
+
+
+	</div>
+
+	<div id="sidebar-primary" class="col sidebar" style="min-height: 31477px;">
+		<div class="sidebar-email sidebar-section">
+	<span class="li_mail"></span>
+	<h4>Get Our Latest Articles</h4>
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+	<form action="http://scotch.us3.list-manage.com/subscribe/post?u=1c412c864c03eadaf07ccd61e&id=a818d504d4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
+	<div class="mc-field-group form-group">
+		<input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Your Secret Electronic Address">
+	</div>
+		<div id="mce-responses" class="clear">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c412c864c03eadaf07ccd61e_a818d504d4" value=""></div>
+		<div class="clear text-right"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-warning btn-sm"></div>
+	</form>
+	</div>
+	<!--End mc_embed_signup-->
+</div>
+
+<div class="sidebar-section clearfix text-center">
+	<script async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/adsbygoogle.js"></script>
+<!-- Middle Sidebar -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-4625466825098355" data-ad-slot="3512927827" data-ad-format="auto" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:380px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:380px;background-color:transparent"><iframe width="380" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="sidebar-sticky affix" data-spy="affix" data-offset-top="3330" style="width: 0px;">
+
+	<div class="sidebar-section clearfix">
+		<h4>Random Awesome Articles</h4>
+
+							<div class="sidebar-article article-small text-center">
+				<a href="http://scotch.io/tutorials/simple-laravel-layouts-using-blade"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/laravel-layouts-600x250.png" class="img-responsive wp-post-image" alt="laravel-layouts"></a>
+				<h3><a href="http://scotch.io/tutorials/simple-laravel-layouts-using-blade">Simple Laravel Layouts using Blade</a></h3>
+			</div>
+					<div class="sidebar-article article-small text-center">
+				<a href="http://scotch.io/bar-talk/creating-our-first-windows-8-app"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/pomodoro-on-the-rocks-600x250.jpg" class="img-responsive wp-post-image" alt="pomodoro-on-the-rocks"></a>
+				<h3><a href="http://scotch.io/bar-talk/creating-our-first-windows-8-app">Creating Our First Windows 8 App</a></h3>
+			</div>
+					<div class="sidebar-article article-small text-center">
+				<a href="http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4"><img width="600" height="250" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/using-the-express-4-router-600x250.jpg" class="img-responsive wp-post-image" alt="using-the-express-4-router"></a>
+				<h3><a href="http://scotch.io/tutorials/javascript/learn-to-use-the-new-router-in-expressjs-4">Learn to Use the New Router in ExpressJS 4.0</a></h3>
+			</div>
+			</div>
+
+</div>	</div>
+
+	<div id="sidebar-secondary" class="col sidebar">
+		<div class="sidebar-section clearfix">
+	<h4>
+		<a href="http://scotch.io/advertise">Advertisements <span class="fa fa-info-circle"></span></a>
+	</h4>
+	<div class="ad-sidebar clearfix">
+		<div id="bsap_1291897" class="bsap_1291897 bsap"><a href="http://stats.buysellads.com/click.go?z=1291897&b=4093129&g=&s=&sw=1920&sh=1080&br=chrome,35,mac&r=0.3245513755828142&link=http://www.gojs.net/latest/index.html?utm_source=scotchio&utm_medium=tr300x250&utm_term=canvas&utm_content=3sample-data&utm_campaign=bsa-gojs" onmouseover="window.status = &#39;http://www.gojs.net/latest/index.html?utm_source=scotchio&amp;utm_medium=tr300x250&amp;utm_term=canvas&amp;utm_content=3sample-data&amp;utm_campaign=bsa-gojs&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="GoJS is a fast and powerful JavaScript library for implementing interactive diagrams in HTML5 Canvas applications." id="bsa_4093129" target="_blank"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/157017-1360606622.png" width="300" height="250" alt="GoJS is a fast and powerful JavaScript library for implementing interactive diagrams in HTML5 Canvas applications."></a></div>
+	</div>
+	<div class="clearfix">
+		<div id="bsap_1291908" class="bsap_1291908 bsap"><a href="http://stats.buysellads.com/click.go?z=1291908&b=4543644&g=&s=&sw=1920&sh=1080&br=chrome,35,mac&r=0.23195157828740776&link=http://fooplugins.com/?utm_source=scotch.io" onmouseover="window.status = &#39;http://fooplugins.com/?utm_source=scotch.io&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" class="ad1 odd" title="Serious WordPress &amp; jQuery Plugins" id="bsa_4543644" target="_blank"><img src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/214571-1395774467.png" width="125" height="125" alt="Serious WordPress &amp; jQuery Plugins"></a><a href="https://buysellads.com/buy/detail/219041/zone/1291908?utm_source=site_219041&utm_medium=website&utm_campaign=adhere&utm_content=zone_1291908" title="Advertise Here" class="adhere ad2 even" target="_blank">Advertise Here</a></div>
+	</div>
+</div>
+
+<div class="sidebar-section clearfix">
+	<h4><a href="http://scotch.io/popular"><span class="li_bulb"></span> Our Most Popular Articles</a></h4><a href="http://scotch.io/popular">
+
+				</a><div class="sidebar-article article-small text-center"><a href="http://scotch.io/popular">
+			</a><a href="http://scotch.io/bar-talk/best-of-sublime-text-3-features-plugins-and-settings"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/best-of-sublime-text-300x125.jpg" class="img-responsive wp-post-image" alt="best-of-sublime-text"></a>
+			<h3><a href="http://scotch.io/bar-talk/best-of-sublime-text-3-features-plugins-and-settings">Best of Sublime Text 3: Features, Plugins, and Settings</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-angular-todo-300x125.jpg" class="img-responsive wp-post-image" alt="node-angular-todo"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">Creating a Single Page Todo App with Node and Angular</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/angularjs-form-validation"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/angular-forms-300x125.jpg" class="img-responsive wp-post-image" alt="angular-forms"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/angularjs-form-validation">AngularJS Form Validation</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/angular-routing-300x125.jpg" class="img-responsive wp-post-image" alt="angular-routing"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Single Page Apps with AngularJS Routing and Templating</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/angular-routing-using-ui-router"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/angular-routing-ui-router-300x125.jpg" class="img-responsive wp-post-image" alt="angular-routing-ui-router"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/angular-routing-using-ui-router">AngularJS Routing Using UI-Router</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/node-authentication-header-300x125.jpg" class="img-responsive wp-post-image" alt="node-authentication-header"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/easy-node-authentication-setup-and-local">Easy Node Authentication: Setup and Local</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/javascript/submitting-ajax-forms-the-angularjs-way"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/angular-forms-300x125(1).jpg" class="img-responsive wp-post-image" alt="angular-forms"></a>
+			<h3><a href="http://scotch.io/tutorials/javascript/submitting-ajax-forms-the-angularjs-way">Submitting AJAX Forms: The AngularJS Way</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/bs31-300x125.jpg" class="img-responsive wp-post-image" alt="bs3"></a>
+			<h3><a href="http://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know">Bootstrap 3 Tips and Tricks You Might Not Know</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/laravel-crud-300x125.jpg" class="img-responsive wp-post-image" alt="laravel-crud"></a>
+			<h3><a href="http://scotch.io/tutorials/simple-laravel-crud-with-resource-controllers">Simple Laravel CRUD with Resource Controllers</a></h3>
+		</div>
+			<div class="sidebar-article article-small text-center">
+			<a href="http://scotch.io/bar-talk/understanding-the-bootstrap-3-grid-system"><img width="300" height="125" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/bootstrap-grid-300x125.jpg" class="img-responsive wp-post-image" alt="bootstrap-grid"></a>
+			<h3><a href="http://scotch.io/bar-talk/understanding-the-bootstrap-3-grid-system">Understanding the Bootstrap 3 Grid System</a></h3>
+		</div>
+	</div>
+
+<div class="sidebar-sticky affix" data-spy="affix" data-offset-top="2330">
+
+<div class="sidebar-section clearfix">
+<div id="bsap_1293057" class="bsap_1293057 bsap"><div id="backfill_1293057_div"><!--INLINE--><script type="text/javascript" id="auto_1" class="ignoreme">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') +
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type="text/javascript" id="auto_2" class="ignoreme">
+googletag.cmd.push(function() {
+googletag.defineSlot('/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057', [300, 250], 'div-gpt-ad-1393949653449-0').addService(googletag.pubads());
+googletag.pubads().set("page_url", "http://scotch.io");
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<!-- scotchio_med_rec_MPU_300x250_bsazone_1293057 -->
+<div id="div-gpt-ad-1393949653449-0" style="width:300px; height:250px;">
+<script type="text/javascript" id="auto_3" class="ignoreme">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1393949653449-0'); });
+</script>
+<div id="google_ads_iframe_/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057_0" name="google_ads_iframe_/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom;"></iframe></div><iframe id="google_ads_iframe_/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057_0__hidden__" name="google_ads_iframe_/8691100/scotchio_med_rec_MPU_300x250_bsazone_1293057_0__hidden__" width="0" height="0" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" src="javascript:"<html><body style='background:transparent'></body></html>"" style="border: 0px; vertical-align: bottom; visibility: hidden; display: none;"></iframe></div></div></div>
+</div>
+
+<div class="sidebar-email sidebar-section">
+	<span class="li_mail"></span>
+	<h4>Get Our Latest Articles</h4>
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+	<form action="http://scotch.us3.list-manage.com/subscribe/post?u=1c412c864c03eadaf07ccd61e&id=a818d504d4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
+	<div class="mc-field-group form-group">
+		<input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Your Secret Electronic Address">
+	</div>
+		<div id="mce-responses" class="clear">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c412c864c03eadaf07ccd61e_a818d504d4" value=""></div>
+		<div class="clear text-right"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-warning btn-sm"></div>
+	</form>
+	</div>
+	<!--End mc_embed_signup-->
+</div>
+
+</div>	</div>
+
+</div><!-- /main -->
+
+<div id="footer">
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/related.css" type="text/css" media="all">
+<script type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/prism.js"></script>
+
+<!-- TWITTER -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!-- GOOGLE +1 -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+
+<!-- GOOGLE ADS -->
+<script async="" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/adsbygoogle.js"></script>
+
+<!-- ANALYTICS -->
+<script>
+	function trackOutboundLink(link, category, action) {
+		try {
+			_gaq.push(['_trackEvent', category , action]);
+		} catch(err){}
+
+		setTimeout(function() {
+			document.location.href = link.href;
+		}, 100);
+	}
+
+	var _gaq = _gaq || [];
+	var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+	_gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+	_gaq.push(['_setAccount', 'UA-36045075-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+
+
+</div><!-- #site-wrapper -->
+
+<!-- SECRET LAUNCH CODES FOR DEVS -->
+<!-- Easter Egg 1: aHR0cDovL3Njb3RjaC5pby/imaU= -->
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-2.newrelic.com","licenseKey":"c9625edc98","applicationID":"3353285","transactionName":"ZARTYRMEXkYABxVeW11OcFYVDF9bThcIWVNfBBxBCAlVRg==","queueTime":0,"applicationTime":787,"ttGuid":"","agentToken":"","atts":"SENQF1seTUg=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-411.min.js"}</script>
+<iframe name="oauth2relay482667713" id="oauth2relay482667713" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><script src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/nr-411.min.js"></script><script type="text/javascript" src="./Build a RESTful API Using Node and Express 4 ♥ Scotch_files/c9625edc98"></script></body></html>
